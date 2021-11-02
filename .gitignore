@@ -1,5 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 
+assets/
+
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 

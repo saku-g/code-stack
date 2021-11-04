@@ -1,4 +1,11 @@
 // sidebar
 aside.l-sidebar
-  p sidebarブロック
-// /sidebar
+  .drawer
+    h2.drawer__title Components
+    nav.drawer__nav
+      ul.drawer__list
+        - for (var i = 0; i < 11; i++)
+            if i % 3 == 0
+              li.drawer__item menuText menuText menuText menuText menuText
+            else
+              li.drawer__item menuText

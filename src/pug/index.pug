@@ -22,18 +22,7 @@ html(lang="ja")
             .contents__body
               .grid
                 - for (var i = 0; i < 9; i++)
-                  div.grid__item
-                    article.card
-                      .card__body
-                        h3.card__title Cards
-                      figure.card__image
-                        img(src="../assets/img/card_sample.webp", alt="", srcset="")
-
-
-
-
-
-
-
+                  article.grid__item
+                    include ./include/_card
 
       include ./include/_footer

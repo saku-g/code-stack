@@ -1,8 +1,13 @@
 // header
 header.l-header
   .l-header__inner
-    h1.l-header__logo
-      a(href="index.html")
-        img(src="", alt="SACCK")
+    if page === 'top'
+      h1.l-header__logo
+        a(href="index.html")
+          img(src="../assets/img/logo.svg" alt="SACCK" width="98" height="24")
+    else
+      .l-header__logo
+        a(href="index.html")
+          img(src="../assets/img/logo.svg" alt="SACCK" width="98" height="24")
     button.button.hamburger
     button.button.search

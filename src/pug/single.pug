@@ -5,16 +5,56 @@ html(lang="ja")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title webpack dev env
-    //- link(rel="stylesheet", href="css/style.css")
+    link(rel="stylesheet", href="../assets/css/app.css")
   body
+    div.l-wrapper
 
-    include ./include/_header
+      include ./include/_header
 
-    //sidebar
-    include ./include/_sidebar
+      include ./include/_sidebar
 
-    //main
-    main.l-main
-      p mainブロック
+      //main
+      main.l-main
+        .contents
+          .contents__container
+            article.post
+              header.post__header
+                h1.c-heading-1.post__title PostTitle
+                figure.post-thumbnail
+                  img(src="../assets/img/sample.jpg", alt="", srcset="")
+              .toc
+                ul
+                  - for (var i = 1; i < 4; i++)
+                    li
+                      a(href=`#${i}`) contentText
+              section.post__body
+                p 通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。
+                h2 h2タイトルh2タイトルh2タイトルh2タイトル
+                ul
+                  - for (var i = 1; i <= 3; i++)
+                    if i === 2
+                      li テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    else
+                      li テキストテキスト
+                p
+                  a(href="#" target="_blank") リンクテキスト
+                p
+                  strong ストロングテキスト
+                p
+                  != 'This code is <code>code</code> block!'
+                //- 関連記事リンク
+                .related-link
+                  a.related-link__inner
+                    .related-link__body
+                      span.related-link__title
+                    .related-link__thumbnail
+                      img(src="../assets/img/sample.jpg")
 
-    include ./include/_footer
+                blockquote
+                  p 引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト
+                    cite
+                      a(href="//google.co.jp" target="_blank") Google
+
+
+
+      include ./include/_footer

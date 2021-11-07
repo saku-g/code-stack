@@ -1,16 +1,11 @@
+-
+  var pageTitle = 'SACCK';
+  var pageDescription = '自分なりのマークアップの考えをまとめたサイト。HTML5やCSS3、JavaScriptを中心に、コードや参考文献を記載していきます。';
+
 doctype html
 html(lang="ja")
   head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title webpack dev env
-    //- Google Fonts
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    //- My CSS
-    link(rel="stylesheet", href="../assets/css/app.css")
+    include ./include/_head
   body
     - var page = 'top';
 

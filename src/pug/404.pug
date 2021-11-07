@@ -7,7 +7,6 @@ html(lang="ja")
     title webpack dev env
     link(rel="stylesheet", href="../assets/css/app.css")
   body
-    - var page = 'top';
 
     div.l-wrapper
 
@@ -17,12 +16,11 @@ html(lang="ja")
 
       //main
       main.l-main
-          .container
-            .hero
-              h2.heading-1.hero__title Components
-            .grid
-              - for (var i = 0; i < 9; i++)
-                article.grid__item
-                  include ./include/_card
+        .container
+          .hero
+            h1.heading-1.hero__title 404 - Page Not Found
+            p.hero__text アクセスしようとしたページが存在しません。
+            p
+              a(href="index.html").c-link Components overview
 
       include ./include/_footer

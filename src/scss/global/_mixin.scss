@@ -1,9 +1,11 @@
 // ----------------------------------------
 // mixin
 // ----------------------------------------
+@use 'variables' as var;
+
 // メディアクエリの記述を簡略化
-// @mixin mq($breakpoint) {
-//   @media (min-width: #{map-get(var.$breakpoints, $breakpoint)}) {
-//     @content;
-//   }
-// }
+@mixin mq($breakpoint) {
+  @media (min-width: #{map-get(var.$breakpoints, $breakpoint)}) {
+    @content;
+  }
+}

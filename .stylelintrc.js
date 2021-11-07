@@ -4,6 +4,5 @@ module.exports = {
     'prettier/prettier': [true, { singleQuote: true }],
     'string-quotes': 'single',
     'color-hex-length': 'short',
-    'unknown-word': null,
   },
 };

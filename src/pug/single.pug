@@ -1,11 +1,11 @@
+-
+  var pageTitle = '記事タイトル | SACCK';
+  var pageDescription = '記事ディスクリプション';
+
 doctype html
 html(lang="ja")
   head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title webpack dev env
-    link(rel="stylesheet", href="../assets/css/app.css")
+    include ./include/_head
   body
     div.l-wrapper
 
@@ -15,7 +15,7 @@ html(lang="ja")
 
       //main
       main.l-main
-        .container
+        .l-container
           article.post
             header.post__header
               h1.heading-1.post__title PostTitle

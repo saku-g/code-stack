@@ -1,11 +1,11 @@
+-
+  var pageTitle = '404 - Page Not Found | SACCK';
+  var pageDescription = '';
+
 doctype html
 html(lang="ja")
   head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title webpack dev env
-    link(rel="stylesheet", href="../assets/css/app.css")
+    include ./include/_head
   body
 
     div.l-wrapper
@@ -16,7 +16,7 @@ html(lang="ja")
 
       //main
       main.l-main
-        .container
+        .l-container
           .hero
             h1.heading-1.hero__title 404 - Page Not Found
             p.hero__text アクセスしようとしたページが存在しません。

@@ -3,5 +3,6 @@
 // ----------------------------------------
 
 @forward 'header';
-// @forward 'variables';
-// @forward 'mixin';
+@forward 'main';
+@forward 'container';
+@forward 'footer';

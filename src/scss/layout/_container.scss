@@ -1,9 +1,9 @@
 // ----------------------------------------
-// main
+// container
 // ----------------------------------------
 
-@use '../global' as g;
-
-.l-main {
-  padding: 2em 0 4em;
+.l-container {
+  width: 90%;
+  max-width: 1240px;
+  padding: 0 5%;
 }

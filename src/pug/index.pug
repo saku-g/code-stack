@@ -20,9 +20,8 @@ html(lang="ja")
           .l-container
             .hero
               h2.heading-1.hero__title Components
-            .grid
+            .cards
               - for (var i = 0; i < 9; i++)
-                article.grid__item
-                  include ./include/_card
+                include ./include/_card
 
       include ./include/_footer

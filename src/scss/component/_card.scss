@@ -4,14 +4,37 @@
 
 @use '../global' as g;
 
+// card wrapper
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.75em 0;
+
+  @include g.mq(sm) {
+    gap: 1em 0;
+  }
+}
+
 .card {
-  display: flex;
-  flex-direction: column-reverse;
-  padding: 1.25em;
-  border: 1px solid transparent;
+  &__link {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1em;
+    border: 1px solid transparent;
+
+    @include g.mq(md) {
+      padding: 1.25em;
+    }
+  }
 
   &__body {
     margin-top: 0.5em;
+  }
+
+  &__title {
+    line-height: 1.5;
+    color: var(--color-text);
+    word-wrap: break-word;
   }
 
   &__thumbnail {

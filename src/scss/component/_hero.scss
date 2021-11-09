@@ -1,7 +1,9 @@
 // ----------------------------------------
-// @forward style.scss
+// hero
 // ----------------------------------------
 
-@forward 'hero';
-@forward 'heading';
-@forward 'card';
+@use '../global' as g;
+
+.hero {
+  padding-bottom: 1.5em;
+}

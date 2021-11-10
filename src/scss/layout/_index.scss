@@ -2,7 +2,9 @@
 // @forward style.scss
 // ----------------------------------------
 
+@forward 'wrapper';
 @forward 'header';
+@forward 'sidebar';
 @forward 'main';
 @forward 'container';
 @forward 'footer';

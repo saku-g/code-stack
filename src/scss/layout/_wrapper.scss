@@ -1,16 +1,15 @@
 // ----------------------------------------
-// container
+// wrapper
 // ----------------------------------------
 
 @use '../global/' as g;
 
-.l-container {
-  width: 90%;
-  max-width: 1240px;
-  padding: 0 5%;
+// html全体の親
+.l-wrapper {
+  display: grid;
+  grid-template-rows: 60px 1fr 60px;
 
   @include g.mq(md) {
-    width: auto;
-    padding: 0 40px;
+    grid-template-columns: 240px 1fr;
   }
 }

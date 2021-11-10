@@ -1,0 +1,15 @@
+// ----------------------------------------
+// wrapper
+// ----------------------------------------
+
+@use '../global/' as g;
+
+// html全体の親
+.l-wrapper {
+  display: grid;
+  grid-template-rows: 60px 1fr 60px;
+
+  @include g.mq(md) {
+    grid-template-columns: 240px 1fr;
+  }
+}

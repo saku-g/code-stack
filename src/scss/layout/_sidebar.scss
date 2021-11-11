@@ -5,12 +5,15 @@
 @use '../global' as g;
 
 .l-sidebar {
-  // 991px以下のレイアウトはdrawerで指定
+  /* 列の1本目から2本目のグリッドラインまで */
+  grid-column: 1;
+  /* 行の2本目から4本目のグリッドラインまで */
+  grid-row: 1 / 4;
+  transform: translateX(-100%);
 
   @include g.mq(lg) {
-    /* 列の1本目から2本目のグリッドラインまで */
-    grid-column: 1;
     /* 行の2本目から4本目のグリッドラインまで */
     grid-row: 2 / 4;
+    transform: translateX(0);
   }
 }

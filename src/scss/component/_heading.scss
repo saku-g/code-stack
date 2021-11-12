@@ -7,9 +7,12 @@
 .heading {
   font-weight: 700;
   font-feature-settings: 'palt';
+  word-break: break-word;
+  line-height: 1.5;
 }
+
 // 見出しレベル1
-.heading.-primary {
+.heading--1 {
   font-size: 1.75em;
 
   @include g.mq(md) {

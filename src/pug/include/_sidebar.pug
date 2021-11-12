@@ -1,11 +1,13 @@
 // sidebar
 aside.l-sidebar
   .drawer
-    h2.drawer__title Components
+    h2.heading.drawer__title Components
     nav.drawer__nav
       ul.drawer__list
-        - for (var i = 0; i < 11; i++)
+        - for (var i = 1; i < 11; i++)
             if i % 3 == 0
-              li.drawer__item menuText menuText menuText menuText menuText
+              li.drawer__item
+                a(href="#") longText longText longText longText longText
             else
-              li.drawer__item menuText
+              li.drawer__item
+                a(href="#") menuText

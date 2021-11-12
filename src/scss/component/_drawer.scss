@@ -8,6 +8,32 @@
   box-sizing: border-box;
   overflow-y: scroll;
   height: 100%;
-  padding: 2em 1.5em;
+  padding: 2em 0;
   border-right: 1px solid var(--color-border);
+
+  &__title {
+    padding: 0 1.5rem;
+    font-size: 1.125em;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  &__nav {
+    margin-top: 0.75em;
+  }
+
+  &__list {
+    padding: 0 0.5em;
+  }
+
+  &__item {
+    a {
+      display: block;
+      padding: 0.625rem 1rem;
+      font-size: 0.875em;
+      color: var(--color-primary-dark);
+      word-break: break-word;
+      line-height: 1.5;
+    }
+  }
 }

@@ -10,4 +10,5 @@
   /* 行の1本目から2本目のグリッドラインまで */
   grid-row-start: 1;
   background-color: var(--color-primary);
+  z-index: var(--z-index-header);
 }

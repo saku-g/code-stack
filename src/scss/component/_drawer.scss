@@ -6,7 +6,6 @@
 
 .drawer {
   box-sizing: border-box;
-  overflow-y: scroll;
   height: 100%;
   border-right: 1px solid var(--color-border);
 
@@ -20,7 +19,9 @@
   }
 
   &__body {
+    height: 100%;
     padding: 1.5em 0;
+    overflow-y: auto;
   }
 
   &__title {

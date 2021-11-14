@@ -20,11 +20,10 @@ html(lang="ja")
       main.l-main
         .l-container
           .hero
-            h1.heading-1.hero__title 「word」の検索結果
+            h2.heading.heading--1 「test」の検索結果
             p.hero__text X件の検索結果を表示。（検索結果がありません。）
-          .grid
+          .cards
             - for (var i = 0; i < 9; i++)
-              article.grid__item
-                include ./include/_card
+              include ./include/_card
 
       include ./include/_footer

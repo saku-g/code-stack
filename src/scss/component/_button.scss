@@ -1,0 +1,36 @@
+// ----------------------------------------
+// button
+// ----------------------------------------
+
+@use '../global' as g;
+
+.button {
+  appearance: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: inherit;
+}
+
+// アイコンのみボタン共通スタイル
+%button-iconBase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.button--hamburger {
+  @extend %button-iconBase;
+
+  @include g.mq(lg) {
+    display: none;
+  }
+}
+
+.button--search {
+  @extend %button-iconBase;
+}

@@ -8,6 +8,8 @@ html(lang="ja")
     include ./include/_head
   body
 
+    include ./include/_svg
+
     div.l-wrapper
 
       include ./include/_header
@@ -18,9 +20,17 @@ html(lang="ja")
       main.l-main
         .l-container
           .hero
-            h1.heading-1.hero__title 404 - Page Not Found
-            p.hero__text アクセスしようとしたページが存在しません。
-            p
-              a(href="index.html").c-link Components overview
+            h2.heading.heading--1 404 - Page Not Found
+            p.hero__text アクセスしようとしたページが存在しません
+            p.hero__text
+              a.link(href="index.html")
+                svg(
+                  width="13"
+                  height="13"
+                )
+                  use(
+                    xlink:href="#back" fill="currentColor"
+                  )
+                | Back to top
 
       include ./include/_footer

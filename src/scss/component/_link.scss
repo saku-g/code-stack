@@ -1,0 +1,14 @@
+// ----------------------------------------
+// link
+// ----------------------------------------
+
+.link {
+  padding-bottom: 0.25em;
+  font-weight: 700;
+  color: var(--color-link);
+  border-bottom: 1px solid currentColor;
+
+  svg {
+    margin-right: 0.5em;
+  }
+}

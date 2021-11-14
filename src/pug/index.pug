@@ -9,6 +9,8 @@ html(lang="ja")
   body
     - var page = 'top';
 
+    include ./include/_svg
+
     div.l-wrapper
 
       include ./include/_header
@@ -17,11 +19,11 @@ html(lang="ja")
 
       //main
       main.l-main
-          .l-container
-            .hero
-              h2.heading.heading--1 Components
-            .cards
-              - for (var i = 0; i < 9; i++)
-                include ./include/_card
+        .l-container
+          .hero
+            h2.heading.heading--1 Components
+          .cards
+            - for (var i = 0; i < 9; i++)
+              include ./include/_card
 
       include ./include/_footer

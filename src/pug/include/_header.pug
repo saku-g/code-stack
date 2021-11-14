@@ -4,10 +4,34 @@ header.l-header
     if page === 'top'
       h1.l-header__logo
         a(href="index.html")
-          img(src="../assets/img/logo.svg" alt="SACCK" width="98" height="24")
+          img(
+            src="../assets/img/logo.svg"
+            alt="SACCK"
+            width="98"
+            height="24"
+          )
     else
       .l-header__logo
         a(href="index.html")
-          img(src="../assets/img/logo.svg" alt="SACCK" width="98" height="24")
-    button.button.hamburger
-    button.button.search
+          img(
+            src="../assets/img/logo.svg" alt="SACCK"
+            width="98"
+            height="24"
+          )
+    button.l-header__menu-button.button.button--hamburger
+      svg(
+        width="24"
+        height="16"
+      )
+        use(
+          xlink:href="#hamburger"
+          fill="#fff"
+        )
+    button.l-header__search-button.button.button--search
+      svg(
+        width="20" height="20"
+      )
+        use(
+          xlink:href="#search"
+          fill="#fff"
+        )

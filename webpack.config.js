@@ -3,6 +3,7 @@ const globule = require('globule');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -20,6 +21,7 @@ const config = {
   mode: MODE,
   entry: {
     app: './src/js/index.js',
+    post: './src/scss/post.scss',
   },
   output: {
     path: path.resolve(__dirname, `./${dir.dist}`),
@@ -86,6 +88,7 @@ const config = {
       configFile: path.resolve(__dirname, '') + '/.stylelintrc.js',
       fix: true,
     }),
+    new FixStyleOnlyEntriesPlugin(),
     new MiniCssExtractPlugin({
       filename: './css/[name].css',
     }),

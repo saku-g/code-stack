@@ -1,4 +1,5 @@
 -
+  var page = 'single'
   var pageTitle = '記事タイトル | SACCK';
   var pageDescription = '記事ディスクリプション';
 
@@ -21,7 +22,7 @@ html(lang="ja")
         .l-container
           article.post
             header.post__header
-              h1.heading-1.post__title PostTitle
+              h1.heading.heading--1 PostTitle
               figure.post-thumbnail
                 img(src="../assets/img/sample.jpg", alt="", srcset="")
             .toc

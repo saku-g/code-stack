@@ -1,0 +1,53 @@
+// ----------------------------------------
+// post
+// ----------------------------------------
+
+@use 'global/mixin' as g;
+
+.post {
+  &__thumbnail {
+    margin-top: 1em;
+  }
+
+  &__body {
+    margin: 4em 0;
+  }
+}
+
+.post__body {
+  // 見出し共通
+  h2,
+  h3,
+  h4 {
+    font-weight: 700;
+    font-feature-settings: 'palt';
+    word-break: break-word;
+    line-height: 1.5;
+  }
+
+  h2:not([class]) {
+    font-size: 1.5em; // 24
+
+    @include g.mq(md) {
+      font-size: 2em; // 32
+    }
+  }
+
+  h3:not([class]) {
+    font-size: 1.125em; // 18
+
+    @include g.mq(md) {
+      font-size: 1.5em; // 24
+    }
+  }
+
+  h2:not(:first-child) {
+    margin-top: 3em;
+  }
+
+  p {
+    margin-top: 2em;
+    font-size: 1em;
+    line-height: 2;
+  }
+}

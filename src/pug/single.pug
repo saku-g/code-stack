@@ -23,16 +23,17 @@ html(lang="ja")
           article.post
             header.post__header
               h1.heading.heading--1 PostTitle
-              figure.post-thumbnail
+              figure.post__thumbnail
                 img(src="../assets/img/sample.jpg", alt="", srcset="")
-            .toc
-              ul
-                - for (var i = 1; i < 4; i++)
-                  li
-                    a(href=`#${i}`) contentText
+            //- .post__toc
+            //-   ul
+            //-     - for (var i = 1; i < 4; i++)
+            //-       li
+            //-         a(href=`#${i}`) contentText
             section.post__body
-              p 通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。
-              h2 h2タイトルh2タイトルh2タイトルh2タイトル
+              h2 p / 通常のテキスト
+              p ここは通常のテキストです。ここは通常のテキストです。ここは通常のテキストです。ここは通常のテキストです。ここは通常のテキストです。ここは通常のテキストです。ここは通常のテキストです。ここは通常のテキストです。ここは通常のテキストです。
+              h2 ul / リスト
               ul
                 - for (var i = 1; i <= 3; i++)
                   if i === 2

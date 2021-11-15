@@ -1,4 +1,5 @@
 -
+  var page = 'single'
   var pageTitle = '記事タイトル | SACCK';
   var pageDescription = '記事ディスクリプション';
 
@@ -21,40 +22,77 @@ html(lang="ja")
         .l-container
           article.post
             header.post__header
-              h1.heading-1.post__title PostTitle
-              figure.post-thumbnail
+              h1.heading.heading--1 PostTitle
+              figure.post__thumbnail
                 img(src="../assets/img/sample.jpg", alt="", srcset="")
-            .toc
-              ul
-                - for (var i = 1; i < 4; i++)
-                  li
-                    a(href=`#${i}`) contentText
+            //- .post__toc
+            //-   ul
+            //-     - for (var i = 1; i < 4; i++)
+            //-       li
+            //-         a(href=`#${i}`) contentText
             section.post__body
-              p 通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。通常のテキストスタイル。
-              h2 h2タイトルh2タイトルh2タイトルh2タイトル
+              //- p
+              h2 pタグ
+              p 通常のテキストスタイルです。通常のテキストスタイルです。通常のテキストスタイルです。通常のテキストスタイルです。通常のテキストスタイルです。通常のテキストスタイルです。通常のテキストスタイルです。通常のテキストスタイルです。通常のテキストスタイルです。通常のテキストスタイルです。
+              //- ol・ul
+              h2 ol・ulタグ
+              h3 olタグ
+              ol
+                - for (var i = 1; i <= 3; i++)
+                  if i === 2
+                    li テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                  else
+                    li テキストテキスト
+              h3 ulタグ
               ul
                 - for (var i = 1; i <= 3; i++)
                   if i === 2
                     li テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                   else
                     li テキストテキスト
+              //- a
+              h2 aタグ
+              h3 通常
+              p 親要素をpタグで囲って、
+                a(href="#") リンクテキスト
+                | 使用してください。
+              h3 新規タブ
               p
                 a(href="#" target="_blank") リンクテキスト
-              p
-                strong ストロングテキスト
-              p
-                != 'This code is <code>code</code> block!'
-              //- 関連記事リンク
+                | 使用してください。
+              //- strong
+              h2 strongタグ
+              p 親要素をpタグで囲って、
+                strong 強調したいテキスト
+                | 使用してください。
+              //- code
+              h2 codeタグ
+              p 親要素をpタグで囲って、
+                code code
+                | 使用してください。
+              //- alert
+              h2 alert
+              .alert.alert--danger Don’t
+              .alert.alert--warning Warning
+              .alert.alert--success Success Tips
+              //- 引用ブロック
+              h2 引用ブロック
+              blockquote
+                p 引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト
+                  cite
+                    a(
+                      href="//google.co.jp"
+                      target="_blank") Google
+              //- 関連記事
+              h2 関連記事
               .related-link
-                a.related-link__inner
+                a.related-link__inner(
+                  href="#"
+                  target="_blank"
+                )
                   .related-link__body
                     span.related-link__title
                   .related-link__thumbnail
                     img(src="../assets/img/sample.jpg")
-              //- 引用ブロック
-              blockquote
-                p 引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト
-                  cite
-                    a(href="//google.co.jp" target="_blank") Google
 
       include ./include/_footer

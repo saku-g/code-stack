@@ -1,0 +1,39 @@
+// ----------------------------------------
+// button
+// ----------------------------------------
+
+@use '../global' as g;
+
+.related-link {
+  margin: 2em 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1em;
+    box-shadow: 0 0 0 1px var(--color-border-shadow);
+  }
+
+  &__body {
+    flex: 1;
+  }
+
+  &__title {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  &__thumbnail {
+    position: relative;
+    width: 45%;
+    max-width: 10em;
+    margin-right: 0.75em;
+    overflow: hidden;
+
+    @include g.mq(md) {
+      max-width: 15em;
+    }
+  }
+}

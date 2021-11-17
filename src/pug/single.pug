@@ -70,19 +70,20 @@ html(lang="ja")
               p 親要素をpタグで囲って、
                 code code
                 | 使用してください。
+              //- 引用ブロック
+              h2 引用ブロック
+              blockquote
+                p 引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト
+                  cite 出典はこちら
+                    a(
+                      href="//google.co.jp"
+                      target="_blank") Google
+                    | をご確認ください
               //- alert
               h2 alert
               .alert.alert--danger Don’t
               .alert.alert--warning Warning
               .alert.alert--success Success Tips
-              //- 引用ブロック
-              h2 引用ブロック
-              blockquote
-                p 引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト
-                  cite
-                    a(
-                      href="//google.co.jp"
-                      target="_blank") Google
               //- 関連記事
               h2 関連記事
               .related-link
@@ -91,7 +92,7 @@ html(lang="ja")
                   target="_blank"
                 )
                   .related-link__body
-                    span.related-link__title
+                    span.related-link__title CSS Flexboxの使い方をどこよりも詳しく解説！図解やサンプルもあり！
                   .related-link__thumbnail
                     img(src="../assets/img/sample.jpg")
 

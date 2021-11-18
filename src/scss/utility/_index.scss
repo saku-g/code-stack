@@ -1,1 +1,13 @@
-/* @use 'ファイル名';　*/
+@use '../global/' as g;
+
+@include g.mq(md) {
+  p {
+    color: red;
+  }
+}
+
+@include g.mq(md, $type: max) {
+  p {
+    color: blue;
+  }
+}

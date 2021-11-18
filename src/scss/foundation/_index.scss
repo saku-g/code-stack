@@ -2,5 +2,5 @@
 // @forward style.scss
 // ----------------------------------------
 
-@forward 'reset';
-@forward 'base';
+@use 'reset';
+@use 'base';

@@ -2,12 +2,12 @@
 // @forward style.scss
 // ----------------------------------------
 
-@forward 'button';
-@forward 'drawer';
-@forward 'hero';
-@forward 'heading';
-@forward 'card';
-@forward 'link';
-@forward 'post';
-@forward 'alert';
-@forward 'related-link';
+@use 'button';
+@use 'drawer';
+@use 'hero';
+@use 'heading';
+@use 'card';
+@use 'link';
+@use 'post';
+@use 'alert';
+@use 'related-link';

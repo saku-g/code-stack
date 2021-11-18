@@ -1,8 +1,5 @@
 // ----------------------------------------
-// import files
+// @forward global
 // ----------------------------------------
 
-@use 'foundation';
-@use 'layout';
-@use 'component';
-@use 'utility';
+@forward 'mq';

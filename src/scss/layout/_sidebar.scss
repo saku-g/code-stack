@@ -17,3 +17,9 @@
     transform: translateX(0);
   }
 }
+
+// JSで操作.button--hamburgerがtrigger.
+.l-sidebar.l-sidebar--open {
+  z-index: var(--z-index-sidebar);
+  transform: translateX(0);
+}

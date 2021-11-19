@@ -19,10 +19,10 @@
   h2,
   h3,
   h4 {
-    font-weight: 700;
     font-feature-settings: 'palt';
-    word-break: break-word;
+    font-weight: 700;
     line-height: 1.5;
+    word-break: break-word;
   }
 
   h2:not([class]) {
@@ -46,10 +46,10 @@
 
     &::before {
       content: '';
+      display: inline-block;
       position: absolute;
       top: 1rem;
       left: 0;
-      display: inline-block;
       width: 0.75rem;
       height: 2px;
       background-color: var(--color-primary-dark);
@@ -81,9 +81,9 @@
 
       &::before {
         content: '';
+        display: inline-block;
         position: absolute;
         left: 0;
-        display: inline-block;
       }
     }
   }
@@ -94,8 +94,8 @@
     li::before {
       content: counter(list) '. ';
       counter-increment: list;
-      font-weight: 700;
       color: var(--color-primary);
+      font-weight: 700;
     }
   }
 
@@ -111,9 +111,9 @@
 
   a:not([class]) {
     margin: 0 0.5em;
-    font-weight: 700;
-    color: var(--color-link);
     border-bottom: 1px solid var(--color-link);
+    color: var(--color-link);
+    font-weight: 700;
   }
 
   // 新規タブ
@@ -125,8 +125,8 @@
   }
 
   strong:not([class]) {
-    font-weight: 700;
     background: linear-gradient(transparent 60%, #fff799 0);
+    font-weight: 700;
   }
 
   code {
@@ -136,10 +136,10 @@
       display: inline;
       margin: 0 0.25rem;
       padding: 0.25rem 0.5rem;
-      font-size: 0.875rem;
-      font-weight: 700;
       background-color: var(--color-bg);
       border-radius: 0.25rem;
+      font-size: 0.875rem;
+      font-weight: 700;
     }
   }
 
@@ -152,10 +152,10 @@
     // 背景
     &::before {
       content: '';
+      display: inline-block;
       position: absolute;
       top: 0;
       left: 0;
-      display: inline-block;
       width: 2em;
       height: 2em;
       background-color: var(--color-primary-dark);

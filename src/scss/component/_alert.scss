@@ -14,12 +14,12 @@
   word-break: break-word;
 
   &::before {
+    display: inline-block;
     position: absolute;
     top: 50%;
     left: 0.75em;
-    transform: translateY(-50%);
-    display: inline-block;
     line-height: 0;
+    transform: translateY(-50%);
   }
 }
 

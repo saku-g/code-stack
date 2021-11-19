@@ -5,11 +5,11 @@
 @use '../global' as g;
 
 .l-main {
+  box-sizing: border-box;
   /* 列の1本目から4本目のグリッドラインまで */
   grid-column: 1 / 4;
   /* 行の2本目から4本目のグリッドラインまで */
   grid-row: 2;
-  box-sizing: border-box;
   min-height: calc(100vh - 120px);
   padding: 2em 0 4em;
 

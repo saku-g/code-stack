@@ -7,11 +7,11 @@
 .button {
   appearance: none;
   display: inline-block;
-  cursor: pointer;
   padding: 0;
-  border: 0;
   background-color: rgba(0, 0, 0, 0);
+  border: 0;
   color: inherit;
+  cursor: pointer;
 }
 
 // アイコンのみボタン共通スタイル

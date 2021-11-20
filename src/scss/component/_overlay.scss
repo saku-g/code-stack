@@ -1,0 +1,20 @@
+// ----------------------------------------
+// overlay
+// ----------------------------------------
+
+.overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-overlay);
+}
+
+// overlay
+.overlay.is-visible {
+  visibility: visible;
+  opacity: 1;
+}

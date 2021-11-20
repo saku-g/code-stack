@@ -18,8 +18,8 @@
   }
 }
 
-// JSで操作.button--hamburgerがtrigger.
-.l-sidebar.l-sidebar--open {
+// JSで操作.button--hamburgerがtrigger
+.l-sidebar.is-open {
   z-index: var(--z-index-sidebar);
   transform: translateX(0);
 }

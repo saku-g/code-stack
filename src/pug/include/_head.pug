@@ -3,12 +3,15 @@ meta(http-equiv="X-UA-Compatible", content="IE=edge")
 meta(name="viewport", content="width=device-width, initial-scale=1.0")
 title #{pageTitle}
 meta(name="description"  content=pageDescription)
-//- Google Fonts
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-//- My CSS
+//Google Fonts
+link(rel="preconnect" href="https://fonts.googleapis.com")
+link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet")
+//CSS
 link(rel="stylesheet", href="../assets/css/app.css")
-//- Single CSS
+//- シングルページの時だけ読み込む
 if page === 'single'
+  // single.css
   link(rel="stylesheet", href="../assets/css/single.css")
+//JS
+script(defer src="../assets/js/app.js")

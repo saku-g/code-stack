@@ -19,8 +19,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 3.75rem;
+  height: 3.75rem;
 }
 
 .button--hamburger {
@@ -32,5 +32,9 @@
 }
 
 .button--search {
+  @extend %button-iconBase;
+}
+
+.button--close {
   @extend %button-iconBase;
 }

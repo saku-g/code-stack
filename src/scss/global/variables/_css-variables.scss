@@ -1,6 +1,7 @@
 // ----------------------------------------
-// 変数を管理
+// CSS変数
 // ----------------------------------------
+
 :root {
   --color-primary: #4ca07b;
   --color-primary-light: #eff5f2;
@@ -13,18 +14,13 @@
   --color-overlay: rgba(0, 0, 0, 0.32);
   --color-black: #000;
   --color-white: #fff;
+  --color-rgb-black: 0, 0, 0;
+  --z-index-default: 0;
+  --z-index-overlay: 5;
   --z-index-header: 10;
   --z-index-sidebar: 20;
+  --z-index-search-form: 30;
+  --z-index-search-icon: 40;
   --font-family-base: 'Roboto', 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
     sans-serif;
 }
-
-// ブレークポイント管理
-$breakpoints: (
-  'xs': 0,
-  'sm': 576px,
-  'md': 768px,
-  'lg': 992px,
-  'xl': 1200px,
-  'xxl': 1400px,
-) !default;

@@ -1,7 +1,7 @@
 // ----------------------------------------
-// @forward style.scss
+// @forward global
 // ----------------------------------------
 
-@forward 'variables';
-@forward 'mixins';
-@forward 'functions';
+@forward 'css-variables';
+@forward 'breakpoints';
+@forward 'easings';

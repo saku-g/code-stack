@@ -9,17 +9,18 @@
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 240px;
+  max-width: 15em; // 240px
   height: 100%;
   transform: translateX(-100%);
+  transition: transform 0.3s g.ease(out-cubic);
 
   @include g.mq(lg) {
     transform: translateX(0);
   }
 }
 
-// JSで操作.button--hamburgerがtrigger.
-.l-sidebar.l-sidebar--open {
-  z-index: var(--z-index-sidebar);
+// JSで操作.button--hamburgerがtrigger
+.l-sidebar.is-open {
   transform: translateX(0);
+  z-index: var(--z-index-sidebar);
 }

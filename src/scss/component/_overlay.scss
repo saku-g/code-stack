@@ -2,9 +2,11 @@
 // overlay
 // ----------------------------------------
 
+@use '../global/' as g;
+
 .overlay {
-  visibility: hidden;
   opacity: 0;
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -13,8 +15,8 @@
   background-color: var(--color-overlay);
 }
 
-// overlay
+// overlay表示時
 .overlay.is-visible {
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
 }

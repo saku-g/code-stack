@@ -18,7 +18,7 @@ header.l-header
             width="98"
             height="24"
           )
-    button.l-header__menu-button.button.button--hamburger
+    button.l-header__menu-button.button.button--hamburger#js-hamburger-button
       svg(
         width="24"
         height="16"
@@ -27,7 +27,10 @@ header.l-header
           xlink:href="#hamburger"
           fill="#fff"
         )
-    button.l-header__search-button.button.button--search
+    // form
+    form.search-form#js-search-form
+      input.search-form__field(type="text" name="s" placeholder="Search")
+    button.l-header__search-button.button.button--search#js-search-button
       svg(
         width="20" height="20"
       )
@@ -35,5 +38,6 @@ header.l-header
           xlink:href="#search"
           fill="#fff"
         )
+
   // overlay
-  .overlay
+  .overlay#js-overlay

@@ -1,7 +1,5 @@
 // ----------------------------------------
-// @forward style.scss
+// @forward global
 // ----------------------------------------
 
-@forward 'variables';
-@forward 'mixins';
-@forward 'functions';
+@forward 'ease';

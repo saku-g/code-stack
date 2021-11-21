@@ -19,6 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   width: 3.75rem;
   height: 3.75rem;
 }
@@ -35,6 +36,29 @@
   @extend %button-iconBase;
 }
 
-.button--close {
-  @extend %button-iconBase;
+// 検索フォームがactiveのとき
+.button--search.is-active {
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 1.25rem;
+    height: 2px;
+    margin: auto;
+    background-color: var(--color-text);
+    transition: opacity 15ms linear, background-color 15ms linear;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }

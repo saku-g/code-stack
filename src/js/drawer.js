@@ -2,9 +2,8 @@
   Drawer Menu
 ---------------------------------------- */
 
-// export文を使ってhello関数を定義する。
 export function drawer() {
-  const hamburgerButton = document.getElementById('js-hamburger');
+  const hamburgerButton = document.getElementById('js-hamburger-button');
   const sidebar = document.getElementById('js-sidebar');
   const overlay = document.getElementById('js-overlay');
   let drawerState = false;

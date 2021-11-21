@@ -23,9 +23,13 @@
     flex: 1;
     box-sizing: border-box;
     max-height: 3.75rem;
-    padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+    padding: 1.25rem 4.5rem 1.25rem 2.5rem;
     font-size: 1.25em;
     border: none;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 

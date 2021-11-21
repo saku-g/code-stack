@@ -15,14 +15,13 @@
   z-index: var(--z-index-header);
 
   @include g.mq(lg) {
-    padding: 0 0.25em 0 1.5em;
+    padding: 0 0 0 1.5em;
   }
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative; // hamburger/search の親
   }
 
   &__logo {
@@ -36,5 +35,6 @@
 
   &__search-button {
     order: 3;
+    z-index: var(--z-index-search-icon);
   }
 }

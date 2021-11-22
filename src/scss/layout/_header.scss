@@ -12,6 +12,7 @@
   position: relative; // search-formの親
   background-color: var(--color-primary);
   box-shadow: 0 3px 6px rgba(var(--color-rgb-black), 0.16);
+  transition: background-color 0.1s g.ease(in-quart);
   z-index: var(--z-index-header);
 
   @include g.mq(lg) {
@@ -37,4 +38,9 @@
     order: 3;
     z-index: var(--z-index-search-icon);
   }
+}
+
+// JSで操作.button--searchがtrigger
+.l-header.is-search-show {
+  background-color: var(--color-white);
 }

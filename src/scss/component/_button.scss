@@ -34,13 +34,11 @@
 
 .button--search {
   @extend %button-iconBase;
-}
 
-// 検索フォームがactiveのとき
-.button--search.is-active {
   &::before,
   &::after {
     content: '';
+    opacity: 0;
     display: inline-block;
     position: absolute;
     top: 0;
@@ -51,7 +49,7 @@
     height: 2px;
     margin: auto;
     background-color: var(--color-text);
-    transition: opacity 15ms linear, background-color 15ms linear;
+    transition: opacity 0.15s g.ease(in-out-cubic);
   }
 
   &::before {
@@ -60,5 +58,13 @@
 
   &::after {
     transform: rotate(-45deg);
+  }
+}
+
+// 検索フォームがactiveのとき
+.button--search.is-active {
+  &::before,
+  &::after {
+    opacity: 1;
   }
 }

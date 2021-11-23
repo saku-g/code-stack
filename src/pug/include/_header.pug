@@ -27,9 +27,6 @@ header.l-header
           xlink:href="#hamburger"
           fill="#fff"
         )
-    // form
-    form.search-form#js-search-form
-      input.search-form__field(type="text" name="s" placeholder="Search")
     button.l-header__search-button.button.button--search#js-search-button
       svg(
         width="20" height="20"
@@ -38,6 +35,8 @@ header.l-header
           xlink:href="#search"
           fill="#fff"
         )
-
+    // form
+    form.search-form#js-search-form
+      input.search-form__field#js-search-form-field(type="text" name="s" placeholder="Search")
   // overlay
   .overlay#js-overlay

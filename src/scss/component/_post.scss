@@ -2,9 +2,21 @@
 // post
 // ----------------------------------------
 
+@use '../global/' as g;
+
 .post {
-  &__thumbnail {
-    margin-top: 1em;
+  position: relative;
+
+  @include g.mq(lg) {
+    padding-right: 15em; // 240px
+  }
+
+  &__toc {
+    @include g.mq(lg) {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 
   &__body {

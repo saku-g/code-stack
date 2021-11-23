@@ -16,8 +16,8 @@
     border-bottom: 1px solid var(--color-border);
 
     a {
-      padding: 1em 1.5em;
       display: block;
+      padding: 1em 1.5em;
     }
   }
 
@@ -46,10 +46,10 @@
     a {
       display: block;
       padding: 0.625rem 1rem;
-      font-size: 0.875em;
       color: var(--color-primary-dark);
-      word-break: break-word;
+      font-size: 0.875em;
       line-height: 1.5;
+      word-break: break-word;
     }
   }
 }

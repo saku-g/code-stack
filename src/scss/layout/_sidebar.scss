@@ -14,7 +14,7 @@
   transform: translateX(-100%);
   transition: transform 0.3s g.ease(out-cubic);
 
-  @include g.mq(lg) {
+  @include g.mq(md) {
     transform: translateX(0);
   }
 }

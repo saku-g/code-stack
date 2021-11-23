@@ -13,7 +13,7 @@
   min-height: calc(100vh - 120px);
   padding: 2em 0 4em;
 
-  @include g.mq(lg) {
+  @include g.mq(md) {
     /* 列の2本目から4本目のグリッドラインまで */
     grid-column: 2 / 4;
   }

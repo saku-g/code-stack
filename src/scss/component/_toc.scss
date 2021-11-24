@@ -21,6 +21,10 @@
     margin-top: 0.75em;
   }
 
+  &__list {
+    list-style: none;
+  }
+
   &__item {
     a {
       display: block;

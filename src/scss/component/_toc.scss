@@ -1,0 +1,48 @@
+// ----------------------------------------
+// toc
+// ----------------------------------------
+
+@use '../global/' as g;
+
+.toc {
+  margin-top: 4em;
+
+  @include g.mq(lg) {
+    width: 12.5em; // 200px
+    margin-top: 0;
+  }
+
+  &__title {
+    color: var(--color-text);
+    font-weight: 700;
+  }
+
+  &__nav {
+    margin-top: 0.75em;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    a {
+      display: block;
+      padding: 0.5rem 0 0.5rem 1rem;
+      border-left: 2px solid var(--color-border);
+      color: var(--color-primary-dark);
+      line-height: 1.5;
+      word-break: break-all;
+
+      @include g.mq(lg) {
+        font-size: 0.875em;
+      }
+    }
+  }
+
+  &__item.is-current a {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+}

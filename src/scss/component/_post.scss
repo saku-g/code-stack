@@ -2,12 +2,32 @@
 // post
 // ----------------------------------------
 
+@use '../global/' as g;
+
 .post {
-  &__thumbnail {
-    margin-top: 1em;
+  position: relative;
+  max-width: 62.5em; // 1000px
+
+  @include g.mq(lg) {
+    padding-right: 15em; // 240px
+  }
+
+  &__toc {
+    @include g.mq(lg) {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 
   &__body {
     margin: 4em 0;
+  }
+}
+
+// 目次がない時
+.post.is-no-toc {
+  @include g.mq(lg) {
+    padding-right: 0;
   }
 }

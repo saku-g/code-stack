@@ -7,7 +7,8 @@ export function tocGenerate() {
   const headingElements = document.querySelectorAll('.edit-area h2');
 
   if (headingElements.length < 3) {
-    console.log(false);
+    const postRoot = document.getElementById('post');
+    postRoot.classList.add('is-no-toc');
     return;
   }
 

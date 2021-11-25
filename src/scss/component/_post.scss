@@ -21,7 +21,7 @@
 
     // スクロールで固定
     &.is-fixed {
-      @include g.mq(md) {
+      @include g.mq(lg) {
         position: fixed;
         top: 2em;
         right: 2.5em;

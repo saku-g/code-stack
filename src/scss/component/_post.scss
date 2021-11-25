@@ -18,6 +18,15 @@
       top: 0;
       right: 0;
     }
+
+    // スクロールで固定
+    &.is-fixed {
+      @include g.mq(md) {
+        position: fixed;
+        top: 2em;
+        right: 2.5em;
+      }
+    }
   }
 
   &__body {

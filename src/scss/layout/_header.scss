@@ -15,10 +15,6 @@
   transition: background-color 0.1s g.ease(in-quart);
   z-index: var(--z-index-header);
 
-  @include g.mq(lg) {
-    padding: 0 0 0 1.5em;
-  }
-
   &__inner {
     display: flex;
     align-items: center;
@@ -27,6 +23,10 @@
 
   &__logo {
     order: 2;
+
+    @include g.mq(md) {
+      margin-left: 1.5em;
+    }
   }
 
   // hamburger

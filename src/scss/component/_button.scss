@@ -27,7 +27,7 @@
 .button--hamburger {
   @extend %button-iconBase;
 
-  @include g.mq(lg) {
+  @include g.mq(md) {
     display: none;
   }
 }

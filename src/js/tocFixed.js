@@ -5,8 +5,18 @@
 
 export function tocFixed() {
   const header = document.querySelector('.l-header');
-  const toc = document.querySelector('.post__toc');
+  const toc = document.getElementById('js-toc');
 
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0,
+  };
+
+  /**
+   * 交差したときに呼び出す関数
+   * @param entries
+   */
   const callback = (entries) => {
     const [entry] = entries; //entries[0]と同じ意味
     if (!entry.isIntersecting) {
@@ -16,13 +26,6 @@ export function tocFixed() {
     }
   };
 
-  const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0,
-  };
-
   const observer = new IntersectionObserver(callback, options);
-
   observer.observe(header);
 }

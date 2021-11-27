@@ -1,9 +1,8 @@
 /* ----------------------------------------
-  目次固定
-  - headerが見えなくなったら、目次固定
+  現在の目次をアクティブにする
 ---------------------------------------- */
 
-export function tocActive() {
+export function tocActivate() {
   const headingElements = document.querySelectorAll('.edit-area h2');
 
   const options = {
@@ -19,14 +18,15 @@ export function tocActive() {
   const callback = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const currentTocItem = document.querySelector('.toc .is-current');
+        const currentTocItem = document.querySelector('.toc .is-active');
+        // すでにアクティブになっているものが0個の時（=null）以外は、activeを除去
         if (currentTocItem !== null) {
-          currentTocItem.classList.remove('is-current');
+          currentTocItem.classList.remove('is-active');
         }
 
         // 見出しid = <a href="#id">となる目次要素を取得
-        const activeTocAnchor = document.querySelector(`.toc a[href='#${entry.target.id}']`);
-        activeTocAnchor.parentNode.classList.add('is-current');
+        const targetTocAnchor = document.querySelector(`.toc a[href='#${entry.target.id}']`);
+        targetTocAnchor.parentNode.classList.add('is-active');
       }
     });
   };

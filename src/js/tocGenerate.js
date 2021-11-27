@@ -14,6 +14,7 @@ export function tocGenerate() {
 
   // 目次の雛形を生成
   const toc = document.createElement('div');
+  toc.id = 'js-toc';
   toc.className = 'post__toc toc';
   toc.innerHTML = `
   <span class ="toc__title">Contents</span>

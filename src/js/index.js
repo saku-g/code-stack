@@ -5,6 +5,7 @@ import { searchArea } from './searchArea';
 import { tocGenerate } from './tocGenerate';
 import { tocFixed } from './tocFixed';
 import { tocActivate } from './tocActivate';
+import { smoothScroll } from './smoothScroll';
 
 window.addEventListener('DOMContentLoaded', function () {
   drawer();
@@ -12,4 +13,5 @@ window.addEventListener('DOMContentLoaded', function () {
   tocGenerate();
   tocFixed();
   tocActivate();
+  smoothScroll();
 });

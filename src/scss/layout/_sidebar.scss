@@ -24,5 +24,5 @@
 // JSで操作.button--hamburgerがtrigger
 .l-sidebar.is-open {
   transform: translateX(0);
-  z-index: var(--z-index-sidebar);
+  z-index: var(--z-index-drawer-open);
 }

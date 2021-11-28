@@ -3,7 +3,14 @@
 ---------------------------------------- */
 
 export function smoothScroll() {
-  const smoothScrollTrigger = document.querySelectorAll('a[href^="#"]');
+  const smoothScrollTrigger =
+    document.querySelectorAll('a[href^="#"]').length > 0 ? document.querySelectorAll('a[href^="#"]') : null;
+
+  // 値がnullのとき、処理を抜ける
+  if (smoothScrollTrigger === null) {
+    return;
+  }
+
   smoothScrollTrigger.forEach((element) => {
     element.addEventListener('click', (e) => {
       e.preventDefault();

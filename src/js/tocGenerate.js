@@ -3,8 +3,17 @@
   - 記事内のh2の数が3未満の場合は、目次を生成しない
 ---------------------------------------- */
 
+import { tocFixed } from './tocFixed';
+import { tocActivate } from './tocActivate';
+
 export function tocGenerate() {
-  const headingElements = document.querySelectorAll('.edit-area h2');
+  const headingElements =
+    document.querySelectorAll('.edit-area h2').length > 0 ? document.querySelectorAll('.edit-area h2') : null;
+
+  // 値がnullのとき、処理を抜ける
+  if (headingElements === null) {
+    return;
+  }
 
   if (headingElements.length < 3) {
     const postRoot = document.getElementById('post');
@@ -46,4 +55,8 @@ export function tocGenerate() {
 
   const postHeader = document.querySelector('.post__header');
   postHeader.after(toc);
+
+  // 目次に実行する関数を実行
+  tocFixed();
+  tocActivate();
 }

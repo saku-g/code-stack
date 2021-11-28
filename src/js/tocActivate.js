@@ -7,8 +7,8 @@ export function tocActivate() {
 
   const options = {
     root: null,
-    rootMargin: '-30% 0px',
-    threshold: 0,
+    rootMargin: '-25% 0px',
+    threshold: [1.0],
   };
 
   /**
@@ -18,7 +18,7 @@ export function tocActivate() {
   const callback = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const currentTocItem = document.querySelector('.toc .is-active');
+        const currentTocItem = document.querySelector('#js-toc .is-active');
         // すでにアクティブになっているものが0個の時（=null）以外は、activeを除去
         if (currentTocItem !== null) {
           currentTocItem.classList.remove('is-active');

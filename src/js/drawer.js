@@ -23,6 +23,22 @@ export function drawer() {
   hamburgerButton.addEventListener('click', function () {
     if (!drawerState) {
       drawerOpen();
+      /**
+       * CSSで背面を固定
+       */
+      const styles = {
+        height: '100vh',
+        left: '0',
+        overflow: 'hidden',
+        position: 'fixed',
+        top: `${scrollY * -1}px`,
+        width: '100vw',
+      };
+
+      // Object.keys(styles).forEach((key) => {
+      //   // console.log(key);
+      //   document.body.style[key] = styles[key];
+      // });
 
       // overlayクリックで閉じる
       overlay.addEventListener('click', function () {

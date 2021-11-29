@@ -16,7 +16,7 @@
 
   @include g.mq(md) {
     width: 100%;
-    max-width: 15em; // 240px
+    max-width: 16em; // 256px
     transform: translateX(0);
   }
 }

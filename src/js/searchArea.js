@@ -2,42 +2,48 @@
   Search Area
 ---------------------------------------- */
 
-export function searchArea() {
+import { backgroundFixed } from './backgroundFixed';
+
+const searchArea = () => {
   const searchButton = document.getElementById('js-search-button');
-  const searchButtonChild = document.getElementById('js-search-button').children[0];
+  const searchButtonChild = document.getElementById('js-search-button').children[0]; // <svg>検索アイコン
   const searchForm = document.getElementById('js-search-form');
   const searchFormField = document.getElementById('js-search-form-field');
   const overlay = document.getElementById('js-overlay');
-  let searchAreaState = false;
+  let state = false; // 検索エリアの状態
 
-  const searchAreaOpen = () => {
-    searchAreaState = true;
+  const open = () => {
+    state = true;
     searchButton.classList.add('is-active');
     searchForm.classList.add('is-active');
     overlay.classList.add('is-visible', 'is-trigger-search');
-    searchButtonChild.style.display = 'none'; // 検索ボタンを非表示
+    searchButtonChild.style.display = 'none'; // <svg>検索アイコンを非表示
     searchFormField.focus();
+    backgroundFixed(true);
   };
 
-  const searchAreaClose = () => {
-    searchAreaState = false;
+  const close = () => {
+    state = false;
     searchButton.classList.remove('is-active');
     searchForm.classList.remove('is-active');
     overlay.classList.remove('is-visible', 'is-trigger-search');
-    searchButtonChild.style.display = 'block'; // 検索ボタンを表示
+    searchButtonChild.style.display = 'block'; // <svg>検索アイコンを表示
     searchFormField.blur();
+    backgroundFixed(false);
   };
 
   searchButton.addEventListener('click', () => {
-    if (!searchAreaState) {
-      searchAreaOpen();
+    if (!state) {
+      open();
 
       // overlayクリックで閉じる
       overlay.addEventListener('click', function () {
-        searchAreaClose();
+        close();
       });
     } else {
-      searchAreaClose();
+      close();
     }
   });
-}
+};
+
+export { searchArea };

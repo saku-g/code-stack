@@ -23,12 +23,11 @@
 
   &__body {
     height: 100%;
-    padding: 1.5em 0;
     overflow-y: auto;
   }
 
   &__title {
-    padding: 0 1.5rem;
+    padding: 1.5rem 1.5rem 0;
     font-size: 1.125em;
     font-weight: 700;
     line-height: 1.5;
@@ -39,7 +38,7 @@
   }
 
   &__list {
-    padding: 0 0.5em;
+    padding: 0 0.5em 6em;
   }
 
   &__item {

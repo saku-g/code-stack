@@ -44,6 +44,7 @@
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+  z-index: var(--z-index-search-form);
 
   .search-form__field {
     top: 0;

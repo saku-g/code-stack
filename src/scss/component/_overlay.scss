@@ -19,4 +19,12 @@
 .overlay.is-visible {
   opacity: 1;
   visibility: visible;
+
+  &.is-trigger-search {
+    z-index: var(--z-index-overlay-search);
+  }
+
+  &.is-trigger-hamburger {
+    z-index: var(--z-index-overlay-hamburger);
+  }
 }

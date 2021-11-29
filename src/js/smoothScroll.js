@@ -2,7 +2,7 @@
   Smooth Scroll
 ---------------------------------------- */
 
-export function smoothScroll() {
+const smoothScroll = () => {
   const smoothScrollTrigger =
     document.querySelectorAll('a[href^="#"]').length > 0 ? document.querySelectorAll('a[href^="#"]') : null;
 
@@ -27,4 +27,6 @@ export function smoothScroll() {
       });
     });
   });
-}
+};
+
+export { smoothScroll };

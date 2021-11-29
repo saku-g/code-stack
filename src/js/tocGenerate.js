@@ -6,7 +6,7 @@
 import { tocFixed } from './tocFixed';
 import { tocActivate } from './tocActivate';
 
-export function tocGenerate() {
+const tocGenerate = () => {
   const headingElements =
     document.querySelectorAll('.edit-area h2').length > 0 ? document.querySelectorAll('.edit-area h2') : null;
 
@@ -56,7 +56,9 @@ export function tocGenerate() {
   const postHeader = document.querySelector('.post__header');
   postHeader.after(toc);
 
-  // 目次に実行する関数を実行
+  // 目次に実行する関数を順次実行
   tocFixed();
   tocActivate();
-}
+};
+
+export { tocGenerate };

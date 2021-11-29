@@ -12,7 +12,8 @@
   max-width: 20em; // 320px
   height: 100%;
   transform: translateX(-100%);
-  transition: transform 0.3s g.ease(out-cubic);
+  transition: transform 0.2s g.ease(in-out-cubic), z-index 0.3s linear;
+  z-index: var(--z-index-default);
 
   @include g.mq(md) {
     width: 100%;

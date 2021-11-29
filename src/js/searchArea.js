@@ -2,6 +2,8 @@
   Search Area
 ---------------------------------------- */
 
+import { backgroundFixed } from './backgroundFixed';
+
 export function searchArea() {
   const searchButton = document.getElementById('js-search-button');
   const searchButtonChild = document.getElementById('js-search-button').children[0];
@@ -17,6 +19,7 @@ export function searchArea() {
     overlay.classList.add('is-visible', 'is-trigger-search');
     searchButtonChild.style.display = 'none'; // 検索ボタンを非表示
     searchFormField.focus();
+    backgroundFixed(true);
   };
 
   const searchAreaClose = () => {
@@ -26,6 +29,7 @@ export function searchArea() {
     overlay.classList.remove('is-visible', 'is-trigger-search');
     searchButtonChild.style.display = 'block'; // 検索ボタンを表示
     searchFormField.blur();
+    backgroundFixed(false);
   };
 
   searchButton.addEventListener('click', () => {

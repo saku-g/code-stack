@@ -2,6 +2,8 @@
   Drawer Menu
 ---------------------------------------- */
 
+import { backgroundFixed } from './backgroundFixed';
+
 export function drawer() {
   const hamburgerButton = document.getElementById('js-hamburger-button');
   const sidebar = document.getElementById('js-sidebar');
@@ -12,33 +14,21 @@ export function drawer() {
     drawerState = true;
     sidebar.classList.add('is-open');
     overlay.classList.add('is-visible', 'is-trigger-hamburger');
+    // 背面コンテンツのスクロールを無効にする
+    backgroundFixed(true);
   };
 
   const drawerClose = () => {
     drawerState = false;
     sidebar.classList.remove('is-open');
     overlay.classList.remove('is-visible', 'is-trigger-hamburger');
+    // 背面コンテンツのスクロールの無効を解除する
+    backgroundFixed(false);
   };
 
   hamburgerButton.addEventListener('click', function () {
     if (!drawerState) {
       drawerOpen();
-      /**
-       * CSSで背面を固定
-       */
-      const styles = {
-        height: '100vh',
-        left: '0',
-        overflow: 'hidden',
-        position: 'fixed',
-        top: `${scrollY * -1}px`,
-        width: '100vw',
-      };
-
-      // Object.keys(styles).forEach((key) => {
-      //   // console.log(key);
-      //   document.body.style[key] = styles[key];
-      // });
 
       // overlayクリックで閉じる
       overlay.addEventListener('click', function () {

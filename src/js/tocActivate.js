@@ -2,7 +2,7 @@
   現在の目次をアクティブにする
 ---------------------------------------- */
 
-export function tocActivate() {
+const tocActivate = () => {
   const headingElements = document.querySelectorAll('.edit-area h2');
 
   const options = {
@@ -35,4 +35,6 @@ export function tocActivate() {
   headingElements.forEach((element) => {
     observer.observe(element);
   });
-}
+};
+
+export { tocActivate };

@@ -3,7 +3,8 @@
 ---------------------------------------- */
 /**
  *
- * @param state → `true` or `false` - 背景固定の状態
+ * @param state
+ * - 背景固定の状態を引数で指定。（`true` or `false`）
  */
 const backgroundFixed = (state) => {
   /**

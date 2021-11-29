@@ -3,7 +3,7 @@
   - headerが見えなくなったら、目次固定
 ---------------------------------------- */
 
-export function tocFixed() {
+const tocFixed = () => {
   const header = document.querySelector('.l-header');
   const toc = document.getElementById('js-toc');
 
@@ -18,7 +18,7 @@ export function tocFixed() {
    * @param entries
    */
   const callback = (entries) => {
-    const [entry] = entries; //entries[0]と同じ意味
+    const [entry] = entries; // 今回は対象が一つのみのため、entries[0]と同じ意味(header)
     if (!entry.isIntersecting) {
       toc.classList.add('is-fixed');
     } else {
@@ -28,4 +28,6 @@ export function tocFixed() {
 
   const observer = new IntersectionObserver(callback, options);
   observer.observe(header);
-}
+};
+
+export { tocFixed };

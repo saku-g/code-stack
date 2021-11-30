@@ -12,6 +12,9 @@ const searchArea = () => {
   const overlay = document.getElementById('js-overlay');
   let state = false; // 検索エリアの状態
 
+  // 検索フォームの入力候補をOffにする
+  searchFormField.setAttribute('autocomplete', 'off');
+
   const open = () => {
     state = true;
     searchButton.classList.add('is-active');
@@ -19,6 +22,7 @@ const searchArea = () => {
     overlay.classList.add('is-visible', 'is-trigger-search');
     searchButtonChild.style.display = 'none'; // <svg>検索アイコンを非表示
     searchFormField.focus();
+    // 背面コンテンツのスクロールを無効にする
     backgroundFixed(true);
   };
 
@@ -29,6 +33,7 @@ const searchArea = () => {
     overlay.classList.remove('is-visible', 'is-trigger-search');
     searchButtonChild.style.display = 'block'; // <svg>検索アイコンを表示
     searchFormField.blur();
+    // 背面コンテンツのスクロールの無効を解除する
     backgroundFixed(false);
   };
 

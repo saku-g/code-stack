@@ -29,7 +29,7 @@ $gutter--lg: 1.25em;
   &__link {
     display: flex;
     flex-direction: column-reverse;
-    border: 1px solid transparent;
+    transition: box-shadow 0.3s g.ease(in-out-cubic);
 
     @include g.mq(sm) {
       padding: $gutter--sm;
@@ -37,6 +37,10 @@ $gutter--lg: 1.25em;
 
     @include g.mq(lg) {
       padding: $gutter--lg;
+    }
+
+    @include g.hover() {
+      box-shadow: 0 0 0 1px var(--color-border-shadow);
     }
   }
 

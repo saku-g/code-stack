@@ -49,6 +49,12 @@
       font-size: 0.875em;
       line-height: 1.5;
       word-break: break-word;
+      transition: background-color 0.2s g.ease(in-cubic), color 0.3s g.ease(in-cubic);
+
+      @include g.hover() {
+        background-color: var(--color-primary-light);
+        color: var(--color-text);
+      }
     }
   }
 }

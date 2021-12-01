@@ -2,13 +2,26 @@
 // link
 // ----------------------------------------
 
+@use '../global/' as g;
+
 .link {
   padding-bottom: 0.25em;
   border-bottom: 1px solid currentColor;
   color: var(--color-link);
   font-weight: 700;
+  transition: border-color 0.2s g.ease(out-expo);
 
+  @include g.hover() {
+    border-color: transparent;
+
+    svg {
+      transform: translateX(-4px);
+    }
+  }
+
+  // アイコンが前にある場合
   svg {
     margin-right: 0.5em;
+    transition: transform 0.2s g.ease(out-expo);
   }
 }

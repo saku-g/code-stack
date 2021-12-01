@@ -17,7 +17,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--color-white);
-  transition: opacity 0.1s g.ease(out-quint), visibility 0.1s;
+  transition: opacity 0.1s g.ease(in-quad), visibility 0.1s;
   z-index: var(--z-index-search-form);
 
   &__field {
@@ -31,7 +31,7 @@
     border: none;
     font-size: 1.25em;
     font-family: var(--font-family-base);
-    transition: top 0.1s g.ease(out-quint);
+    transition: top 0.1s g.ease(in-out-quart);
 
     &:focus {
       outline: none;
@@ -45,7 +45,7 @@
   visibility: visible;
   pointer-events: all;
   // visibilityをtransition指定しているため、こちらで再度transitionを指定。visibilityは含まないものとする。
-  transition: opacity 0.2s g.ease(out-quint);
+  transition: opacity 0.2s g.ease(in-quad);
 
   .search-form__field {
     top: 0;

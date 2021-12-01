@@ -4,14 +4,20 @@
 
 @use '../global' as g;
 
-.related-link {
+.related-article {
+  display: block;
   margin: 2em 0;
 
-  &__inner {
+  &__link {
     display: flex;
     flex-direction: row-reverse;
     padding: 1em;
     box-shadow: 0 0 0 1px var(--color-border-shadow);
+    transition: box-shadow 0.2s g.ease(in-cubic);
+
+    @include g.hover() {
+      box-shadow: 0 4px 12px var(--color-border-shadow);
+    }
   }
 
   &__body {

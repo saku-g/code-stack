@@ -35,6 +35,12 @@
 .button--search {
   @extend %button-iconBase;
 
+  @include g.hover() {
+    svg {
+      opacity: 0.6;
+    }
+  }
+
   &::before,
   &::after {
     content: '';

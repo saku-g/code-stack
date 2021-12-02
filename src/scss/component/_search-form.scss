@@ -40,7 +40,7 @@
 }
 
 // フォーム表示時
-.search-form.is-active {
+[data-search='visible'] .search-form {
   opacity: 1;
   visibility: visible;
   pointer-events: all;

@@ -30,13 +30,14 @@ $gutter--lg: 1.25em;
     display: flex;
     flex-direction: column-reverse;
     transition: box-shadow 0.3s g.ease(in-out-cubic);
+    padding-bottom: 0.75em;
 
     @include g.mq(sm) {
-      padding: $gutter--sm;
+      padding: $gutter--sm $gutter--sm 1.5em;
     }
 
     @include g.mq(lg) {
-      padding: $gutter--lg;
+      padding: $gutter--lg $gutter--lg 1.5em;
     }
 
     @include g.hover() {

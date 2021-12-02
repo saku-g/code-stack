@@ -16,16 +16,18 @@
   transition: all 0.25s g.ease(in-quart);
 }
 
-// overlay表示時
-.overlay.is-visible {
+// overlay表示時(extend)
+%overlayVisible {
   opacity: 1;
   visibility: visible;
+}
 
-  &.is-trigger-search {
-    z-index: var(--z-index-overlay-search);
-  }
+[data-search='visible'] .overlay {
+  @extend %overlayVisible;
+  z-index: var(--z-index-overlay-search);
+}
 
-  &.is-trigger-hamburger {
-    z-index: var(--z-index-overlay-hamburger);
-  }
+[data-drawer='open'] .overlay {
+  @extend %overlayVisible;
+  z-index: var(--z-index-overlay-hamburger);
 }

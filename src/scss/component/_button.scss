@@ -65,8 +65,8 @@
   }
 }
 
-// 検索フォームがactiveのとき
-.button--search.is-active {
+// 検索フォームがvisibleのとき
+[data-search='visible'] .button--search {
   &::before,
   &::after {
     display: inline-block;

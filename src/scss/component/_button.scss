@@ -5,21 +5,21 @@
 @use '../global' as g;
 
 .button {
-  appearance: none;
   display: inline-block;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0);
   border: 0;
+  background-color: rgba(0, 0, 0, 0);
   color: inherit;
   cursor: pointer;
+  appearance: none;
 }
 
 // アイコンのみボタン共通スタイル
 %button-iconBase {
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  align-items: center;
+  justify-content: center;
   width: 3.75rem;
   height: 3.75rem;
 }

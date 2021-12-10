@@ -1,8 +1,8 @@
 const path = require('path');
 const globule = require('globule');
-const ESLintPlugin = require('eslint-webpack-plugin');
-const StylelintPlugin = require('stylelint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -15,6 +15,23 @@ const dir = {
   src: 'src',
   dist: 'assets',
 };
+
+// BrowserSync共通設定
+const browserSyncConfig = {
+  host: 'localhost',
+  port: 3000,
+  open: 'external',
+};
+
+// pug or phpで条件分岐
+if (process.env.NODE_ENV === 'server') {
+  // php
+  browserSyncConfig.proxy = 'http://mywordpress.local';
+} else {
+  // pug(html)
+  browserSyncConfig.server = { baseDir: ['./'] };
+  browserSyncConfig.startPath = '/static/';
+}
 
 const config = {
   mode: MODE,
@@ -79,26 +96,17 @@ const config = {
     ],
   },
   plugins: [
-    new ESLintPlugin({
-      fix: true,
-    }),
-    new StylelintPlugin({
-      configFile: path.resolve(__dirname, '') + '/.stylelintrc.js',
-      fix: true,
-    }),
     new MiniCssExtractPlugin({
       filename: './css/[name].css',
     }),
-    new BrowserSyncPlugin({
-      host: 'localhost',
-      port: 3000,
-      open: 'external',
-      /* pug */
-      server: { baseDir: ['./'] },
-      startPath: '/static/',
-      /* php */
-      // proxy: 'http://mywordpress.local',
+    new StylelintPlugin({
+      configFile: path.resolve(__dirname, '.stylelintrc.js'),
+      fix: true,
     }),
+    new ESLintPlugin({
+      fix: true,
+    }),
+    new BrowserSyncPlugin(browserSyncConfig),
     new CopyWebpackPlugin({
       patterns: [
         {

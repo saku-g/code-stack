@@ -7,8 +7,8 @@
 .drawer {
   box-sizing: border-box;
   height: 100%;
-  background-color: var(--color-white);
   border-right: 1px solid var(--color-border);
+  background-color: var(--color-white);
 
   &__header {
     box-sizing: border-box;
@@ -45,11 +45,11 @@
     a {
       display: block;
       padding: 0.625rem 1rem;
+      transition: background-color 0.2s g.ease(in-cubic), color 0.3s g.ease(in-cubic);
       color: var(--color-primary-dark);
       font-size: 0.875em;
       line-height: 1.5;
       word-break: break-word;
-      transition: background-color 0.2s g.ease(in-cubic), color 0.3s g.ease(in-cubic);
 
       @include g.hover() {
         background-color: var(--color-primary-light);

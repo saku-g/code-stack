@@ -6,6 +6,7 @@
 
 .l-sidebar {
   position: fixed;
+  z-index: var(--z-index-default);
   top: 0;
   left: 0;
   width: calc(100% - 2.5em);
@@ -13,7 +14,6 @@
   height: 100%;
   transform: translateX(-100%);
   transition: transform 0.2s g.ease(in-out-cubic), z-index 0.3s linear;
-  z-index: var(--z-index-default);
 
   @include g.mq(md) {
     width: 100%;
@@ -24,6 +24,6 @@
 
 // JSで操作.button--hamburgerがtrigger
 [data-drawer='open'] .l-sidebar {
-  transform: translateX(0);
   z-index: var(--z-index-drawer-open);
+  transform: translateX(0);
 }

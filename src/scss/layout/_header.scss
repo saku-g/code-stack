@@ -5,15 +5,15 @@
 @use '../global' as g;
 
 .l-header {
+  position: relative; // search-formの親
+  z-index: var(--z-index-header);
   /* 列の1本目から4本目のグリッドラインまで */
   grid-column: 1/ 4;
   /* 行の1本目から2本目のグリッドラインまで */
   grid-row-start: 1;
-  position: relative; // search-formの親
+  transition: background-color 0.1s g.ease(in-quart);
   background-color: var(--color-primary);
   box-shadow: 0 3px 6px rgba(var(--color-rgb-black), 0.16);
-  transition: background-color 0.1s g.ease(in-quart);
-  z-index: var(--z-index-header);
 
   &__inner {
     display: flex;
@@ -35,8 +35,8 @@
   }
 
   &__search-button {
-    order: 3;
     z-index: var(--z-index-search-icon);
+    order: 3;
   }
 }
 

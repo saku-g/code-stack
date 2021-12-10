@@ -5,21 +5,21 @@
 @use '../global/' as g;
 
 .overlay {
-  opacity: 0;
   visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-overlay);
   transition: all 0.25s g.ease(in-quart);
+  opacity: 0;
+  background-color: var(--color-overlay);
 }
 
 // overlay表示時(extend)
 %overlayVisible {
-  opacity: 1;
   visibility: visible;
+  opacity: 1;
 }
 
 [data-search='visible'] .overlay {

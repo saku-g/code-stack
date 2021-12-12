@@ -16,27 +16,49 @@ const dir = {
   dist: 'assets',
 };
 
-// BrowserSync共通設定
+/**
+ * 対象のpugファイルから、 new HtmlWebpackPluginを生成
+ */
+const HtmlWebpackPlugins = [];
+const pages = globule.find(`./${dir.src}/pug/**/*.pug`, {
+  ignore: [`./${dir.src}/pug/**/_*.pug`],
+});
+pages.forEach((page) => {
+  const fileName = page.replace(`./${dir.src}/pug/`, '').replace('.pug', '.html');
+  HtmlWebpackPlugins.push(
+    new HtmlWebpackPlugin({
+      template: page,
+      publicPath: path.resolve(__dirname, ''),
+      filename: `../static/${fileName}`,
+      inject: false, //scriptタグの自動挿入/
+      minify: false,
+    }),
+  );
+});
+
+/**
+ * BrowserSyncPluginの設定（`pug` or `php`で設定分岐）
+ */
 const browserSyncConfig = {
   host: 'localhost',
   port: 3000,
   open: 'external',
 };
 
-// pug or phpで条件分岐
-if (process.env.NODE_ENV === 'server') {
-  // php
-  browserSyncConfig.proxy = 'http://mywordpress.local';
-} else {
+if (process.env.NODE_KEY === 'static') {
   // pug(html)
   browserSyncConfig.server = { baseDir: ['./'] };
   browserSyncConfig.startPath = '/static/';
+} else if (process.env.NODE_KEY === 'server') {
+  // php
+  browserSyncConfig.proxy = 'http://sacckcode.local';
+  browserSyncConfig.files = ['**/*.php'];
 }
 
 const config = {
   mode: MODE,
   entry: {
-    app: './src/js/index.js',
+    app: `./${dir.src}/js/index.js`,
   },
   output: {
     path: path.resolve(__dirname, `./${dir.dist}`),
@@ -106,6 +128,7 @@ const config = {
     new ESLintPlugin({
       fix: true,
     }),
+    ...HtmlWebpackPlugins,
     new BrowserSyncPlugin(browserSyncConfig),
     new CopyWebpackPlugin({
       patterns: [
@@ -147,22 +170,5 @@ const config = {
     }),
   ],
 };
-
-// .pug → .html にコンパイル
-const pages = globule.find(`./${dir.src}/pug/**/*.pug`, {
-  ignore: [`./${dir.src}/pug/**/_*.pug`],
-});
-pages.forEach((page) => {
-  const fileName = page.replace(`./${dir.src}/pug/`, '').replace('.pug', '.html');
-  config.plugins.push(
-    new HtmlWebpackPlugin({
-      template: page,
-      publicPath: path.resolve(__dirname, ''),
-      filename: `../static/${fileName}`,
-      inject: false, //scriptタグの自動挿入/
-      minify: false,
-    }),
-  );
-});
 
 module.exports = config;

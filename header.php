@@ -25,10 +25,14 @@
 	<!-- ルートコンテナ -->
 	<div class="l-wrapper">
 
-		<!-- header-->
+		<!-- header -->
 		<header class="l-header">
 			<div class="l-header__inner">
-				<h1 class="l-header__logo"><a href="index.html"><img src="../assets/img/logo.svg" alt="SACCK" width="98" height="24"></a></h1>
+				<h1 class="l-header__logo">
+					<a href="index.html">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo.svg" alt="SACCK" width="98" height="24">
+					</a>
+				</h1>
 				<button class="l-header__menu-button button button--hamburger" id="js-hamburger-button">
 					<svg width="24" height="16">
 					<use xlink:href="#hamburger" fill="#fff"></use>

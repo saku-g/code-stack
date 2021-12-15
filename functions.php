@@ -7,7 +7,17 @@
  */
 
 /**
+ * Add Theme Supports
+ * WordPressのテーマ拡張機能の有効化
+ */
+function my_theme_setup() {
+	add_theme_support( 'post-thumbnails' ); /* サムネイル有効化 */
+}
+add_action( 'after_setup_theme', 'my_theme_setup' );
+
+/**
  * 関数群の読み込み
  * require_onceを先頭に付け、重複ファイルの読み込み防ぐ
  */
-require_once get_theme_file_path( './functions/add-theme-file.php' ); /* CSS・JSファイルの読み込み */
+require_once get_theme_file_path( './functions/add-theme-files.php' ); /* CSS・JSファイルの読み込み */
+require_once get_theme_file_path( './functions/add-image-size.php' ); /* サムネイルサイズの設定 */

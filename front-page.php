@@ -19,22 +19,30 @@
 		<div class="hero">
 			<h2 class="heading heading--1">Components</h2>
 		</div>
+	<?php if ( have_posts() ) : ?>
 		<div class="cards">
-			<?php
-			$i = 1;
-			for ( $i = 1; $i <= 10; $i++ ) :
-				?>
+		<?php
+		while ( have_posts() ) :
+			the_post();
+			?>
 			<article class="card">
-				<a class="card__link" href="single.html">
+				<a class="card__link" href="<?php the_permalink(); ?>">
 					<div class="card__body">
-						<h3 class="heading card__title">Cards</h3>
+						<h3 class="heading card__title"><?php the_title(); ?></h3>
 					</div>
 					<div class="card__thumbnail">
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/card-sample.png" srcset="">
+						<?php
+						if ( has_post_thumbnail() ) :
+							the_post_thumbnail( 'list-thumbnail' );
+							?>
+						<?php else : ?>
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/default-thumbnail.png" width="280" height="156" srcset="">
+						<?php endif; ?>
 					</div>
 				</a>
 			</article>
-			<?php endfor; ?>
+		<?php endwhile; ?>
+	<?php endif; ?>
 		</div>
 	</div><!-- /.l-container -->
 </main>

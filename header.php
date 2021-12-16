@@ -32,7 +32,7 @@
 		<header class="l-header">
 			<div class="l-header__inner">
 				<h1 class="l-header__logo">
-					<a href="index.html">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo.svg" alt="SACCK" width="98" height="24">
 					</a>
 				</h1>

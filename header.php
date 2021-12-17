@@ -47,9 +47,7 @@
 					</svg>
 				</button>
 				<!-- form-->
-				<form class="search-form">
-					<input class="search-form__field" id="js-search-field" type="text" name="s" placeholder="Search">
-				</form>
+				<?php get_search_form(); ?>
 			</div>
 			<!-- overlay-->
 			<div class="overlay" id="js-overlay"></div>

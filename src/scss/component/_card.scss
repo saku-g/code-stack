@@ -15,7 +15,7 @@ $gutter--lg: 1.25em;
   gap: 0.75em 0;
 
   @include g.mq(sm) {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1em 0;
     margin: 0 -#{$gutter--sm};
   }

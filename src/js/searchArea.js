@@ -7,7 +7,7 @@ import { backgroundFixed } from './backgroundFixed';
 const searchArea = () => {
   const searchButton = document.getElementById('js-search-button');
   const searchButtonChild = document.getElementById('js-search-button').children[0]; // <svg>検索アイコン
-  const searchFormField = document.getElementById('js-search-field');
+  const searchFormField = document.querySelector('.js-search-field');
   const overlay = document.getElementById('js-overlay');
   let state = false; // 検索エリアの状態
 

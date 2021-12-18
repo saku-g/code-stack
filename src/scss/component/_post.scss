@@ -26,6 +26,11 @@
         top: 2em;
         right: 2.5em;
       }
+
+      @media (min-width: 1500px) {
+        right: unset;
+        left: calc(50% + 510px);
+      }
     }
   }
 

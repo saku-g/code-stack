@@ -31,11 +31,20 @@
 		<!-- header -->
 		<header class="l-header">
 			<div class="l-header__inner">
-				<h1 class="l-header__logo">
+			<?php
+			if ( is_home() || is_front_page() ) {
+				$tag_start = '<h1 class="l-header__logo">';
+				$tag_end   = '</h1>';
+			} else {
+				$tag_start = '<div class="l-header__logo">';
+				$tag_end = '</div>';
+			}
+			?>
+				<?php echo wp_kses_post( $tag_start ); ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo.svg" alt="SACCK" width="98" height="24">
 					</a>
-				</h1>
+				<?php echo wp_kses_post( $tag_end ); ?>
 				<button class="l-header__menu-button button button--hamburger" id="js-hamburger-button">
 					<svg width="24" height="16">
 					<use xlink:href="#hamburger" fill="#fff"></use>

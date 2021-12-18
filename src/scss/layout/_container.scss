@@ -5,9 +5,10 @@
 @use '../global/' as g;
 
 .l-container {
+  box-sizing: border-box;
   width: 90%;
   max-width: 1240px;
-  padding: 0 5%;
+  margin: 0 auto;
 
   @include g.mq(md) {
     width: auto;

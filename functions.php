@@ -21,4 +21,4 @@ add_action( 'after_setup_theme', 'my_theme_setup' );
  */
 require_once get_theme_file_path( './functions/add-theme-files.php' ); /* CSS・JSファイルの読み込み */
 require_once get_theme_file_path( './functions/add-image-size.php' ); /* サムネイルサイズの設定 */
-require_once get_theme_file_path( './functions/custom-search-filter.php' ); /* 検索対象を投稿のみに適用 */
+require_once get_theme_file_path( './functions/search-filter.php' ); /* 検索対象を投稿のみに適用 */

@@ -28,8 +28,7 @@
       }
 
       @media (min-width: 1500px) {
-        right: unset;
-        left: calc(50% + 510px);
+        right: calc(50% - 710px);
       }
     }
   }

@@ -1,0 +1,47 @@
+:root {
+  --color-primary: #4ca07b;
+  --color-primary-light: #eff5f2;
+  --color-primary-dark: #4f6159;
+  --color-bg: #f2f5f2;
+  --color-text: #1f372d;
+  --color-link: #3a89d8;
+  --color-border: #e2e4e3;
+  --color-border-shadow: rgb(0 0 0 / 16%);
+  --color-overlay: rgba(0, 0, 0, 0.32);
+  --color-black: #000;
+  --color-white: #fff;
+  --color-rgb-black: 0, 0, 0;
+}
+
+.editor-styles-wrapper {
+  &.block-editor-writing-flow {
+    width: auto;
+    width: 100%;
+    max-width: 950px;
+    height: auto !important;
+    margin: 20px auto;
+    padding: 25px 0 100px;
+    background-color: white;
+    //入力エリア内側の定義
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  }
+
+  strong:not([class]) {
+    background: linear-gradient(transparent 60%, #fff799 0);
+    font-weight: 700;
+  }
+
+  code {
+    font-family: var(--font-family-base);
+
+    &:not([class]) {
+      display: inline;
+      margin: 0 0.25rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      background-color: var(--color-bg);
+      font-size: 0.875rem;
+      font-weight: 700;
+    }
+  }
+}

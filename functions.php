@@ -11,7 +11,7 @@
  * WordPressのテーマ拡張機能の有効化
  */
 function my_theme_setup() {
-	add_theme_support( 'post-thumbnails' ); /* サムネイル有効化 */
+	add_theme_support( 'post-thumbnails' ); /* アイキャッチ画像の有効化 */
 }
 add_action( 'after_setup_theme', 'my_theme_setup' );
 

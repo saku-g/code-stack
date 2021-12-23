@@ -20,10 +20,15 @@ while ( have_posts() ) :
 			<div class="card__thumbnail">
 				<?php
 				if ( has_post_thumbnail() ) :
-					the_post_thumbnail( 'list-thumbnail' );
+					the_post_thumbnail( 'medium' );
 					?>
 				<?php else : ?>
-					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/default-thumbnail.png" width="280" height="156" srcset="">
+					<img
+						width="280"
+						height="156"
+						src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/default-thumbnail.png"
+						srcset="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/default-thumbnail.png 1x,
+						<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/default-thumbnail.png 2x">
 				<?php endif; ?>
 			</div>
 		</a>

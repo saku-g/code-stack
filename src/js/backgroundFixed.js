@@ -32,7 +32,7 @@ const backgroundFixed = (state) => {
     width: '100%',
     height: '100vh',
     paddingRight: `${scrollbarWidth}px`,
-    overflow: 'hidden scroll',
+    overflow: 'hidden',
   };
 
   Object.keys(styles).forEach((key) => {

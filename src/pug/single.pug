@@ -23,19 +23,26 @@ html(lang="ja")
           article.post#post
             header.post__header
               h1.heading.heading--1 PostTitle
-              //- figure.post__thumbnail
-              //-   img(src="../assets/img/sample.jpg", alt="", srcset="")
-            //- .post__toc.toc
-            //-   span.toc__title Contents
-            //-   nav.toc__nav
-            //-     ol.toc__list
-            //-       - for (var i = 1; i < 6; i++)
-            //-           if i % 2 == 0
-            //-             li.toc__item
-            //-               a(href="#") SampleSampleSampleSampleSample Title
-            //-           else
-            //-             li.toc__item
-            //-               a(href="#") Sample Title
+              .post__meta
+                .post__date.date
+                  time.date__posted
+                    svg(
+                      width="13"
+                      height="16"
+                    )
+                      use(
+                        xlink:href="#calendar" fill="currentColor"
+                      )
+                    | 2021.00.00
+                  time.date__updated
+                    svg(
+                      width="16"
+                      height="16"
+                    )
+                      use(
+                        xlink:href="#update" fill="currentColor"
+                      )
+                    | 2021.00.00
             section.post__body.edit-area
               //- p
               h2 pタグ

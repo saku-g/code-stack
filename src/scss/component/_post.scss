@@ -12,6 +12,10 @@
     padding-right: 15em; // 240px
   }
 
+  &__meta {
+    margin-top: 0.5em;
+  }
+
   &__toc {
     @include g.mq(lg) {
       position: absolute;

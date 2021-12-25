@@ -1,0 +1,20 @@
+// ----------------------------------------
+// date
+// ----------------------------------------
+
+@use '../global' as g;
+
+.date {
+  color: var(--color-primary-dark);
+  font-size: 0.875em;
+
+  &__posted,
+  &__updated {
+    margin-right: 1rem;
+  }
+
+  svg {
+    margin-right: 0.5rem;
+    vertical-align: text-top;
+  }
+}

@@ -2,16 +2,17 @@
 // @forward style.scss
 // ----------------------------------------
 
-@use 'button';
-@use 'search-form';
-@use 'drawer';
-@use 'overlay';
-@use 'hero';
-@use 'heading';
-@use 'card';
-@use 'link';
-@use 'post';
-@use 'toc';
-@use 'edit-area';
 @use 'alert';
+@use 'button';
+@use 'card';
+@use 'date';
+@use 'drawer';
+@use 'edit-area';
+@use 'heading';
+@use 'hero';
+@use 'link';
+@use 'overlay';
+@use 'post';
 @use 'related-article';
+@use 'search-form';
+@use 'toc';

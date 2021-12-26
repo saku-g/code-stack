@@ -1,6 +1,6 @@
 <?php
 /**
- * ショートコードにオリジナルのブログカードを登録する
+ * Shortcode embed card
  *
  * @package WordPress
  * @author Sacck

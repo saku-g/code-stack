@@ -11,6 +11,7 @@
   &__link {
     display: flex;
     flex-direction: row-reverse;
+    align-items: flex-start;
     padding: 1em;
     transition: box-shadow 0.2s g.ease(in-cubic);
     box-shadow: 0 0 0 1px var(--color-border-shadow);
@@ -33,13 +34,23 @@
 
   &__thumbnail {
     position: relative;
-    width: 45%;
-    max-width: 10em;
-    margin-right: 0.75em;
+    width: 120px;
+    height: 100px;
+    margin-right: 1em;
     overflow: hidden;
+    background-color: var(--color-bg);
 
     @include g.mq(md) {
-      max-width: 15em;
+      width: 150px;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }

@@ -6,7 +6,9 @@ import { backgroundFixed } from './backgroundFixed';
 
 const drawer = () => {
   const hamburgerButton = document.getElementById('js-hamburger-button');
-  const drawerCloseTriggers = document.querySelectorAll('.js-drawer-close-trigger');
+  const drawerCloseButton = document.getElementById('js-drawer-close-button');
+  const overlay = document.getElementById('js-overlay');
+  const drawerCloseTriggers = [drawerCloseButton, overlay]; // ドロワーを閉じるトリガーを配列で定義
   let state = false; // ドロワーの状態
 
   const open = () => {

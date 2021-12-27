@@ -25,7 +25,7 @@ header.l-header
       )
         use(
           xlink:href="#hamburger"
-          fill="#fff"
+          fill="var(--color-white)"
         )
     button.l-header__search-button.button.button--search#js-search-button
       svg(
@@ -33,10 +33,10 @@ header.l-header
       )
         use(
           xlink:href="#search"
-          fill="#fff"
+          fill="var(--color-white)"
         )
     // form
     form.search-form
       input.search-form__field.js-search-field(type="text" name="s" placeholder="Search")
   // overlay
-  .overlay.js-drawer-close-trigger
+  .overlay#js-overlay

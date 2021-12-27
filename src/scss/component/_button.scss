@@ -72,3 +72,8 @@
     display: inline-block;
   }
 }
+
+.button--close {
+  @extend %button-iconBase;
+  fill: var(--color-text);
+}

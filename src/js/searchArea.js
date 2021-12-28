@@ -18,8 +18,6 @@ const searchArea = () => {
   const open = () => {
     state = true;
     document.body.setAttribute('data-search', 'visible');
-    searchButtonSvg.setAttribute('width', '14');
-    searchButtonSvg.setAttribute('height', '14');
     searchButtonIcon.setAttribute('xlink:href', '#close'); // <use>のxlink:href属性をcloseアイコンに書き換え
     searchButtonIcon.setAttribute('fill', 'currentColor');
     searchFormField.focus();
@@ -30,8 +28,6 @@ const searchArea = () => {
   const close = () => {
     state = false;
     document.body.removeAttribute('data-search');
-    searchButtonSvg.setAttribute('width', '20');
-    searchButtonSvg.setAttribute('height', '20');
     searchButtonIcon.setAttribute('xlink:href', '#search'); // <use>のxlink:href属性をsearchアイコンに戻す
     searchButtonIcon.setAttribute('fill', 'var(--color-white)');
     searchFormField.blur();

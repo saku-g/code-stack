@@ -40,14 +40,15 @@
       opacity: 0.6;
     }
   }
+
+  svg {
+    transition: transform 0.15s g.ease(out-sine);
+  }
 }
 
 // 検索フォームがvisibleのとき
-[data-search='visible'] .button--search {
-  &::before,
-  &::after {
-    display: inline-block;
-  }
+[data-search='visible'] .button--search svg {
+  transform: scale(0.7) rotate(90deg);
 }
 
 .button--close {

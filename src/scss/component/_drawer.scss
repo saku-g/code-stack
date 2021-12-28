@@ -11,39 +11,13 @@
   background-color: var(--color-white);
 
   &__header {
-    position: relative;
     box-sizing: border-box;
     max-height: 3.75rem;
-    padding: 1em 1.5em;
     border-bottom: 1px solid var(--color-border);
-  }
-
-  &__close {
-    position: absolute;
-    z-index: var(--z-index-menu-icon);
-    top: 0;
-    left: 0;
-
-    @include g.mq(md) {
-      display: none;
-    }
-  }
-
-  &__logo {
-    width: calc(100% - 120px);
-    margin: 0 auto;
-    text-align: center;
-
-    @include g.mq(md) {
-      margin: 0;
-    }
 
     a {
-      display: inline-block;
-    }
-
-    img {
-      vertical-align: middle;
+      display: block;
+      padding: 1em 1.5em;
     }
   }
 

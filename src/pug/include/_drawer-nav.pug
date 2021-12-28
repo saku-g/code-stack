@@ -2,21 +2,13 @@
 aside.l-drawer-nav
   .drawer
     .drawer__header
-      button.drawer__close.button.button--close#js-drawer-close-button
-        svg(
-          width="14" height="14"
+      a(href="index.html")
+        img(
+          src="../assets/img/logo-colored.svg"
+          alt="SACCK"
+          width="98"
+          height="24"
         )
-          use(
-            xlink:href="#close"
-          )
-      .drawer__logo
-        a(href="index.html")
-          img(
-            src="../assets/img/logo-colored.svg"
-            alt="SACCK"
-            width="98"
-            height="24"
-          )
     .drawer__body
       h2.heading.drawer__title Components
       nav.drawer__nav

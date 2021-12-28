@@ -40,6 +40,29 @@
       opacity: 0.6;
     }
   }
+
+  &::before,
+  &::after {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 1.25rem;
+    height: 2px;
+    margin: auto;
+    background-color: var(--color-text);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 // 検索フォームがvisibleのとき
@@ -48,9 +71,4 @@
   &::after {
     display: inline-block;
   }
-}
-
-.button--close {
-  @extend %button-iconBase;
-  fill: var(--color-text);
 }

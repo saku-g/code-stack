@@ -11,9 +11,16 @@
 <aside class="l-drawer-nav">
 	<div class="drawer">
 		<div class="drawer__header">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <button class="drawer__close button button--close" id="js-drawer-close-button">
+                <svg width="14" height="14">
+                    <use xlink:href="#close"></use>
+                </svg>
+            </button>
+            <div class="drawer__logo">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-colored.svg" alt="SACCK" width="98" height="24">
 			</a>
+            </div>
 		</div>
 		<div class="drawer__body">
 			<h2 class="heading drawer__title">Components</h2>

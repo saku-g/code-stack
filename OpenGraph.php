@@ -1,5 +1,5 @@
 <?php
-  // phpcs:disable
+  // phpcs:ignoreFile -- this is not a core file
 /*
 	Copyright 2010 Scott MacVicar
 

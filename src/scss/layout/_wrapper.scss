@@ -7,9 +7,17 @@
 // html全体の親
 .l-wrapper {
   display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
   grid-template-rows: 60px 1fr 60px;
 
   @include g.mq(md) {
+    grid-template-areas:
+      'header header'
+      'drawer-nav main'
+      'drawer-nav footer';
     grid-template-columns: 256px 1fr;
   }
 }

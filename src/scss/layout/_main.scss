@@ -6,15 +6,7 @@
 
 .l-main {
   box-sizing: border-box;
-  /* 列の1本目から4本目のグリッドラインまで */
-  grid-column: 1 / 4;
-  /* 行の2本目から4本目のグリッドラインまで */
-  grid-row: 2;
+  grid-area: main;
   min-height: calc(100vh - 120px);
   padding: 2em 0 4em;
-
-  @include g.mq(md) {
-    /* 列の2本目から4本目のグリッドラインまで */
-    grid-column: 2 / 4;
-  }
 }

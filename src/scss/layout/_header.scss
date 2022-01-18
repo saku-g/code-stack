@@ -7,10 +7,7 @@
 .l-header {
   position: relative; // search-formの親
   z-index: var(--z-index-header);
-  /* 列の1本目から4本目のグリッドラインまで */
-  grid-column: 1/ 4;
-  /* 行の1本目から2本目のグリッドラインまで */
-  grid-row-start: 1;
+  grid-area: header;
   transition: background-color 0.1s g.ease(in-quart);
   background-color: var(--color-primary);
   box-shadow: 0 3px 6px rgba(var(--color-rgb-black), 0.16);
@@ -40,7 +37,8 @@
   }
 }
 
-// JSで操作.button--searchがtrigger
+// JSでクラスの取り外しを操作。
+// trigger: .button--search
 .l-header.is-search-show {
   background-color: var(--color-white);
 }

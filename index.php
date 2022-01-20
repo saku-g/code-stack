@@ -1,3 +1,11 @@
-<?php get_header(); ?>
-	<p>contents</p>
-<?php get_footer(); ?>
+<?php
+/**
+ * Indexページテンプレート
+ *
+ * @package WordPress
+ * @author Sacck
+ */
+
+get_header();
+	echo '<p>コンテンツが見つかりませんでした。</p>';
+get_footer();

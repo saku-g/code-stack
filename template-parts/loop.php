@@ -30,4 +30,5 @@ while ( have_posts() ) :
 			</div>
 		</a>
 	</article>
-<?php endwhile; ?>
+	<?php
+endwhile;

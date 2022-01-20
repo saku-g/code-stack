@@ -7,7 +7,6 @@
  */
 
 ?>
-
 		<!-- footer -->
 		<footer class="l-footer">
 			<div class="l-footer__copy">

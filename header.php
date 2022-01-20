@@ -7,7 +7,6 @@
  */
 
 ?>
-
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -23,7 +22,6 @@
 
 	<!-- svg -->
 	<?php get_template_part( 'template-parts/svg' ); ?>
-	<!-- /svg -->
 
 	<!-- ルートコンテナ -->
 	<div class="l-wrapper">
@@ -37,7 +35,7 @@
 				$tag_end   = '</h1>';
 			} else {
 				$tag_start = '<div class="l-header__logo">';
-				$tag_end = '</div>';
+				$tag_end   = '</div>';
 			}
 			?>
 				<?php echo wp_kses_post( $tag_start ); ?>

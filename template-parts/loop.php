@@ -6,9 +6,6 @@
  * @author Sacck
  */
 
-?>
-
-<?php
 while ( have_posts() ) :
 	the_post();
 	?>
@@ -33,4 +30,5 @@ while ( have_posts() ) :
 			</div>
 		</a>
 	</article>
-<?php endwhile; ?>
+	<?php
+endwhile;

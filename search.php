@@ -6,9 +6,7 @@
  * @author Sacck
  */
 
-?>
-
-<?php get_header(); ?>
+get_header(); ?>
 
 <!-- drawer-nav -->
 <?php get_template_part( 'template-parts/drawer-nav' ); ?>
@@ -41,4 +39,5 @@
 	</div><!-- /.l-container -->
 </main>
 
-<?php get_footer(); ?>
+<?php
+get_footer();

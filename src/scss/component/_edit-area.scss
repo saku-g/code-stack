@@ -140,8 +140,8 @@
 
   blockquote {
     position: relative;
-    margin: 2em 0;
-    padding: 1.5em 0.75em 1em 2.5em;
+    margin: 2rem 0;
+    padding: 1.5rem 0.75rem 1rem 2.5rem;
     background-color: var(--color-bg);
 
     // 背景
@@ -151,16 +151,16 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 2em;
-      height: 2em;
+      width: 2rem;
+      height: 2rem;
       background-color: var(--color-primary-dark);
     }
 
     &::after {
       content: url('data:image/svg+xml;utf-8,<svg width="16" height="12" viewBox="0 0 16 12" fill="%23fff" xmlns="http://www.w3.org/2000/svg"><path d="M14.8571 1.93119e-05H11.4286L9.14286 4.57145V11.4286H16V4.57145H12.5714L14.8571 1.93119e-05ZM5.71429 1.93119e-05H2.28571L-7.15256e-07 4.57145V11.4286H6.85714V4.57145L3.42857 4.57145L5.71429 1.93119e-05Z"/></svg>');
       position: absolute;
-      top: 1em;
-      left: 0.5em;
+      top: 1rem;
+      left: 0.5rem;
       transform: translateY(-50%);
       line-height: 0;
     }
@@ -171,7 +171,7 @@
 
     cite {
       display: block;
-      margin-top: 0.5rem;
+      margin-top: 0.5em;
       text-align: right;
     }
   }

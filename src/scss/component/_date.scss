@@ -6,7 +6,7 @@
 
 .date {
   color: var(--color-primary-dark);
-  font-size: 0.875em;
+  font-size: 0.875rem;
 
   &__posted,
   &__updated {
@@ -14,7 +14,7 @@
   }
 
   svg {
-    margin-right: 0.25rem;
+    margin-right: 0.25em;
     vertical-align: text-top;
   }
 }

@@ -25,12 +25,12 @@
     top: -100%;
     box-sizing: border-box;
     flex: 1;
-    max-height: 3.75rem;
+    max-height: var(--header-height);
     padding: 1.25rem 4.5rem 1.25rem 2.5rem;
     transition: top 0.1s g.ease(in-out-quart);
     border: none;
     font-family: var(--font-family-base);
-    font-size: 1.25em;
+    font-size: 20px;
     appearance: none;
 
     &:focus {

@@ -13,9 +13,9 @@
 
 // 見出しレベル1
 .heading--1 {
-  font-size: 1.75em; // 28
+  font-size: 1.75rem; // 28
 
   @include g.mq(md) {
-    font-size: 2.25em; // 36
+    font-size: 2.25rem; // 36
   }
 }

@@ -8,6 +8,7 @@
   position: relative; // search-formの親
   z-index: var(--z-index-header);
   grid-area: header;
+  max-height: var(--header-height);
   transition: background-color 0.1s g.ease(in-quart);
   background-color: var(--color-primary);
   box-shadow: 0 3px 6px rgba(var(--color-rgb-black), 0.16);
@@ -20,9 +21,10 @@
 
   &__logo {
     order: 2;
+    font-size: 16px; // ブラウザ側で文字サイズが拡大されても、ロゴの表示がずれないようにする
 
     @include g.mq(md) {
-      margin-left: 1.5em;
+      margin-left: 20px;
     }
   }
 

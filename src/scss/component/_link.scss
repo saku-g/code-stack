@@ -5,7 +5,7 @@
 @use '../global/' as g;
 
 .link {
-  padding-bottom: 0.25em;
+  padding-bottom: 0.25rem;
   transition: border-color 0.2s g.ease(out-expo);
   border-bottom: 1px solid currentColor;
   color: var(--color-link);

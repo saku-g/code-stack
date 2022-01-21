@@ -22,11 +22,13 @@
   opacity: 1;
 }
 
+// 検索フォームがアクティブのとき
 [data-search='visible'] .overlay {
   @extend %overlayVisible;
   z-index: var(--z-index-overlay-search);
 }
 
+// ドロワーがアクティブのとき
 [data-drawer='open'] .overlay {
   @extend %overlayVisible;
   z-index: var(--z-index-overlay-hamburger);

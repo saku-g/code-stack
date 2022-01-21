@@ -13,9 +13,10 @@
   &__header {
     position: relative;
     box-sizing: border-box;
-    max-height: 3.75rem;
-    padding: 1em 1.5em;
+    max-height: var(--header-height);
+    padding: 16px 1.5rem; // ブラウザ側で文字サイズが拡大されても、ロゴの表示がずれないようにする
     border-bottom: 1px solid var(--color-border);
+    font-size: 16px; // ブラウザ側で文字サイズが拡大されても、ロゴの表示がずれないようにする
   }
 
   &__close {
@@ -35,7 +36,8 @@
     text-align: center;
 
     @include g.mq(md) {
-      margin: 0;
+      width: auto;
+      text-align: left;
     }
 
     a {
@@ -54,17 +56,17 @@
 
   &__title {
     padding: 1.5rem 1.5rem 0;
-    font-size: 1.125em;
+    font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.5;
   }
 
   &__nav {
-    margin-top: 0.75em;
+    margin-top: 0.75rem;
   }
 
   &__list {
-    padding: 0 0.5em 6em;
+    padding: 0 0.5rem 6rem;
   }
 
   &__item {
@@ -73,7 +75,7 @@
       padding: 0.625rem 1rem;
       transition: background-color 0.2s g.ease(in-cubic), color 0.3s g.ease(in-cubic);
       color: var(--color-primary-dark);
-      font-size: 0.875em;
+      font-size: 0.875rem;
       line-height: 1.5;
       word-break: break-word;
 

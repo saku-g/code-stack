@@ -10,15 +10,15 @@
   top: 0;
   left: 0;
   grid-area: drawer-nav;
-  width: calc(100% - 2.5em);
-  max-width: 20em; // 320px
+  width: calc(100% - 2.5rem);
+  max-width: 320px;
   height: 100%;
   transform: translateX(-100%);
   transition: transform 0.2s g.ease(in-out-cubic), z-index 0.3s linear;
 
   @include g.mq(md) {
     width: 100%;
-    max-width: 16em; // 256px
+    max-width: 256px;
     transform: translateX(0);
   }
 }

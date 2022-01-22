@@ -3,6 +3,8 @@
 // ----------------------------------------
 
 :root {
+  --font-family-base: 'Roboto', 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
+    sans-serif;
   --color-primary: #4ca07b;
   --color-primary-light: #eff5f2;
   --color-primary-dark: #4f6159;
@@ -15,8 +17,9 @@
   --color-black: #000;
   --color-white: #fff;
   --color-rgb-black: 0, 0, 0;
-  --header-height: 60px;
-  --footer-height: 60px;
+  --header-height: 3.75rem;
+  --footer-height: 3.75rem;
+  --drawer-width-md: 256px;
   --z-index-default: 0;
   --z-index-header: 5;
   --z-index-overlay-search: 10;
@@ -25,6 +28,4 @@
   --z-index-menu-icon: 20;
   --z-index-overlay-hamburger: 25;
   --z-index-drawer-open: 30;
-  --font-family-base: 'Roboto', 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
-    sans-serif;
 }

@@ -21,10 +21,13 @@
 
   &__logo {
     order: 2;
-    font-size: 16px; // ブラウザ側で文字サイズが拡大されても、ロゴの表示がずれないようにする
 
     @include g.mq(md) {
-      margin-left: 20px;
+      margin-left: 1.25rem;
+    }
+
+    img {
+      vertical-align: middle;
     }
   }
 

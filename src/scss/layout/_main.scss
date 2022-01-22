@@ -7,6 +7,6 @@
 .l-main {
   box-sizing: border-box;
   grid-area: main;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - (var(--header-height) + var(--footer-height)));
   padding: 2rem 0 4rem;
 }

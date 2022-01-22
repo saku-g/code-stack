@@ -51,7 +51,7 @@ if (process.env.NODE_KEY === 'static') {
   browserSyncConfig.startPath = '/static/';
 } else if (process.env.NODE_KEY === 'server') {
   // php
-  browserSyncConfig.proxy = 'http://sacckcode.local';
+  browserSyncConfig.proxy = 'http://sacck.wp/';
   browserSyncConfig.files = ['**/*.php'];
 }
 

@@ -38,11 +38,11 @@ const drawer = () => {
 
       /**
        * イベントリスナー
-       * - ブレークポイント992px以上に切り替わった際、ドロワーを閉じる
+       * - ブレークポイント768px以上に切り替わった際、ドロワーを閉じる
        */
-      const mediaQueryList = window.matchMedia('(min-width:992px)');
+      const mediaQueryList = window.matchMedia('(min-width:768px)');
       const listener = () => {
-        if (window.matchMedia('(min-width:992px)')) {
+        if (mediaQueryList) {
           close();
         }
       };

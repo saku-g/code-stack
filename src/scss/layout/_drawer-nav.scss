@@ -18,7 +18,7 @@
 
   @include g.mq(md) {
     width: 100%;
-    max-width: 256px;
+    max-width: var(--drawer-width-md);
     transform: translateX(0);
   }
 }

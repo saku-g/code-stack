@@ -17,7 +17,7 @@
 			</button>
 			<div class="drawer__logo">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-colored.svg" alt="SACCK" width="84" height="20">
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-colored.svg" alt="SACCK" width="85" height="21">
 			</a>
 			</div>
 		</div>

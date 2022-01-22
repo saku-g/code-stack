@@ -11,12 +11,12 @@
   background-color: var(--color-white);
 
   &__header {
+    display: flex;
     position: relative;
     box-sizing: border-box;
-    max-height: var(--header-height);
-    padding: 16px 1.5rem; // ブラウザ側で文字サイズが拡大されても、ロゴの表示がずれないようにする
+    align-items: center;
+    height: var(--header-height);
     border-bottom: 1px solid var(--color-border);
-    font-size: 16px; // ブラウザ側で文字サイズが拡大されても、ロゴの表示がずれないようにする
   }
 
   &__close {
@@ -31,17 +31,12 @@
   }
 
   &__logo {
-    width: calc(100% - 120px);
-    margin: 0 auto;
+    width: 100%;
     text-align: center;
 
     @include g.mq(md) {
-      width: auto;
+      padding: 0 1.5rem;
       text-align: left;
-    }
-
-    a {
-      display: inline-block;
     }
 
     img {

@@ -11,13 +11,13 @@
     'header'
     'main'
     'footer';
-  grid-template-rows: 60px 1fr 60px;
+  grid-template-rows: var(--header-height) 1fr var(--footer-height);
 
   @include g.mq(md) {
     grid-template-areas:
       'header header'
       'drawer-nav main'
       'drawer-nav footer';
-    grid-template-columns: 256px 1fr;
+    grid-template-columns: var(--drawer-width-md) 1fr;
   }
 }

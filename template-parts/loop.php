@@ -25,7 +25,8 @@ while ( have_posts() ) :
 						height="156"
 						src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/default-thumbnail.png"
 						srcset="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/default-thumbnail.png 1x,
-						<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/default-thumbnail@2x.png 2x">
+						<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/default-thumbnail@2x.png 2x"
+					>
 				<?php endif; ?>
 			</div>
 		</a>

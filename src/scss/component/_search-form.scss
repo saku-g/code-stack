@@ -25,6 +25,7 @@
     top: -100%;
     box-sizing: border-box;
     flex: 1;
+    width: 100%;
     max-height: var(--header-height);
     padding: 1.25rem 4.5rem 1.25rem 2.5rem;
     transition: top 0.1s g.ease(in-out-quart);

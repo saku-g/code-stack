@@ -1,0 +1,55 @@
+// ----------------------------------------
+// breadcrumb
+// ----------------------------------------
+
+@use '../global' as g;
+
+.breadcrumb {
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    margin-right: 0.75em;
+    padding-right: 1em;
+    font-size: 0.75rem;
+
+    // arrowアイコン
+    &:not(:last-child):after {
+      content: url('data:image/svg+xml;utf-8,<svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.590027 5.7166L3.06236 3.23887L0.590027 0.761133L1.35116 0L4.59003 3.23887L1.35116 6.47773L0.590027 5.7166Z" fill="%231f372d"/></svg>');
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      line-height: 1;
+    }
+
+    a {
+      border-bottom: 1px solid var(--color-link);
+      color: var(--color-link);
+
+      @include g.hover() {
+        border-color: transparent;
+      }
+    }
+
+    // Homeアイコンを表示
+    &:first-child {
+      a {
+        &::before {
+          content: url('data:image/svg+xml;utf-8,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.8 10V6.47059H7.2V10H10.2V5.29412H12L6 0L0 5.29412H1.8V10H4.8Z" fill="%233A89D8"/></svg>');
+          display: inline-block;
+          margin-right: 0.25em;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

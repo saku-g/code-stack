@@ -52,6 +52,15 @@ get_header(); ?>
 		endwhile;
 	endif;
 	?>
+		<div class="breadcrumb">
+			<ol class="breadcrumb__list">
+				<?php
+				if ( function_exists( 'bcn_display' ) ) {
+					bcn_display_list();
+				}
+				?>
+			</ol>
+		</div>
 	</div><!-- /.l-container -->
 </main>
 
